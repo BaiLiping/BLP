@@ -4,7 +4,7 @@ using namespace std;
 
 template<class T>
 
-T* BST<T>::search(BSTNode<T>* p, const T& el) const {
+/*T* BST<T>::search(BSTNode<T>* p, const T& el) const {
 while (p != 0)
 if (el == p->el)
 return &p->el;
@@ -12,18 +12,50 @@ else if (el < p->el)
 p = p->left;
 else p = p->right;
 return 0;
+}*/
+
+template<class T>
+void BST<T>::insertTreeNode(BSTNode * parent,T element){
+    if (isEmpty()) root=new BSTNode(element);
+    else{
+        newnode=new BSTNode(element);
+        if (element<parent->data)
+            {if (element<parent->left->data)
+                insertTreeNode(parent->left->element);
+            else{
+                newnode->left=parent->left;
+                parent->left=newnode;
+            }
+        }
+        else{
+            if(element>parent->right->data)
+                insertTreeNode(parent->right,element);
+            else{
+                newnode->right=parent->right;
+                parent->right=newnode;
+            }
+    }
+}
+template<class T>
+void BST<T>::buildTree(vector<T> &input_data){
+    inputdata[0]=min(input_data[0],input_data[1]);
+    inputdata[1]=min(input_data[1],input_data[2]);
+    root=BSTNode(input_data[1],BSTNode(input_data[0]),BSTNode(input_data[2]));
+    for(int i=3;i<input_data.size();++i){
+        insertTreeNode(input_data[i]);
+    }
 }
 
-//template<class T>
-//void BST<T>::buildtree(T * tree_el){
-//    vector<T> 
-//}
+/*template<class T>
+void BST<T>::printTree(){
+
+}
+
+*/
 
 
 
-
-
-
+/*
 
 template<class T>
 void BST<T>::breadthFirst() {
@@ -258,5 +290,5 @@ else previous ->right = tmp->left; // 4.
 delete tmp;
 }
 
-
+*/
 

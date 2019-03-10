@@ -3,34 +3,15 @@
 using namespace std;
 #ifndef BST_H 
 #define BST_H
-
-template<typename T>
-class Stack : public stack<T> { };
-
-
 template<class T>
-class Queue : public queue<T> {
-public:
-   // dequeue() {
-     //   T tmp = front();
-       // queue<T>::pop();
-        //return tmp;
-   // }
-    void enqueue(const T& el) {
-        push(el);
-    }
-};
-
-template<class T>
-class BSTNode {
-public:
+struct BSTNode {
     BSTNode() {
-        left = right = 0;
+        left = right = NULL;
     }
-    BSTNode(const T& e, BSTNode<T> *l = 0, BSTNode<T> *r = 0) {
-        el = e; left = l; right = r;
+    BSTNode(const T& d, BSTNode<T> *l = NULL, BSTNode<T> *r = NULL) {
+        data = d; left = l; right = r;
     }
-    T el;
+    T data;
     BSTNode<T> *left, *right;
 };
 
@@ -39,17 +20,25 @@ template<class T>
 class BST {
 public:
 BST() {
-root = 0;
+root = NULL;
+    cout<<"constructor has been activated"<<endl;
 }
+
 ~BST() {
+    cout<<"decontstructor has been activated"<<endl;
 }
+
 bool isEmpty() const {
-return root == 0;
+    return root == NULL;
 }
 
-//void buildtree(T *);
-//void printtree();
+void insertTreeNode(BSTNode *, T);
+void buildTree(vector<T> &);
+//void printTree();
 
+private:
+BSTNode * root;
+/*
 void preorder() {
 preorder(root);
 }
@@ -81,6 +70,7 @@ void inorder(BSTNode<T>*);
 void postorder(BSTNode<T>*);
 //virtual void visit(BSTNode<T>* p) {
 //cout << p->el << ' ';
-//}
+//}*/
+
 };
 #endif
