@@ -81,9 +81,11 @@ template<typename T>
 void BST<T>::matrix_print(){
 int height=root->level;
 int n=pow(2,height)-1;
-vector<vector<string>> result(height,vector<string>(n,"  "));
+int position=(n-1)/2;
+int offset=(position+1)/2;
+vector<vector<string>> result(height,vector<string>(n," "));
 
-layout(root,result,0,(n+1)/2,(n+1)/2);
+layout(root,result,0,position,offset);
 int i=0;
 for (auto x:result){
     for (auto y:result[i]){
@@ -95,9 +97,30 @@ for (auto x:result){
 
 }
 template<typename T>
-void BST<T>::layout(Node<T>* treenode, vector<vector<string>> &result,int layer, int pos, int base){
+void BST<T>::layout(Node<T>* treenode, vector<vector<string>> &result,int layer, int position, int offset){
     if(treenode==NULL) return;
-    result[layer][pos]=to_string(treenode->data);
-    layout(treenode->leftChild,result,layer+1,pos-base/2,base/2);
-    layout(treenode->rightChild,result,layer+1,pos+base/2,base/2);
+    result[layer][position]=to_string(treenode->data);
+    layout(treenode->leftChild,result,layer+1,position-offset,offset/2);
+    layout(treenode->rightChild,result,layer+1,position+offset,offset/2);
+}
+template<typename T>
+void BST<T>::level_order_travesal(Node<T> * treenode,vector<vector<T>> & result,int layer,int record_to_right,int position){
+    if(treenode==NULL) return;
+    result[layer][position]=treenode->data;
+    level_order_travesal(treenode->leftChild,result,layer+1,record_to_right,(int)(pow(2,record_to_right)-2));
+    level_order_travesal(treenode->rightChild,result,layer+1,record_to_right+1,(int)(pow(2,record_to_right+1)-2+1));
+
+}
+template<typename T>
+void BST<T>::level_print(){
+    vector<vector<T>> result(root->level,vector<T>());
+    level_order_travesal(root,result,0,0,0);
+    int i=0;
+    for(auto x:result){
+        for (auto y:result[i]){
+            cout<<y;
+        }
+        ++i;
+        cout<<endl;
+    }
 }
