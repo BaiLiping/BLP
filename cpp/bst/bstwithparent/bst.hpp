@@ -30,7 +30,7 @@ class BST{
         bool isBalanced();
         void balance_tree();
         void layout(Node<T>*,vector<vector<string>>&,int,int,int);
-        void level_order_travesal(Node<T> *,vector<vector<T>> &,int,int,int);
+        void level_order_travesal(Node<T> *,vector<vector<T>> &,int);
     public:
         BST<T>();
         ~BST<T>();

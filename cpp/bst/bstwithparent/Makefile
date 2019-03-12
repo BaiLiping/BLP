@@ -1,5 +1,5 @@
 CPP=g++
-FLAGS= -g -Wall
+FLAGS= -g -Wall -Wextra
 
 test: test.cpp bst.so
 	$(CPP) $(FLAGS)  $^ -o $@

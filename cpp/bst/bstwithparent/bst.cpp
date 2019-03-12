@@ -104,17 +104,17 @@ void BST<T>::layout(Node<T>* treenode, vector<vector<string>> &result,int layer,
     layout(treenode->rightChild,result,layer+1,position+offset,offset/2);
 }
 template<typename T>
-void BST<T>::level_order_travesal(Node<T> * treenode,vector<vector<T>> & result,int layer,int record_to_right,int position){
+void BST<T>::level_order_travesal(Node<T> * treenode,vector<vector<T>> & result,int layer){
     if(treenode==NULL) return;
-    result[layer][position]=treenode->data;
-    level_order_travesal(treenode->leftChild,result,layer+1,record_to_right,(int)(pow(2,record_to_right)-2));
-    level_order_travesal(treenode->rightChild,result,layer+1,record_to_right+1,(int)(pow(2,record_to_right+1)-2+1));
+    result[layer].push_back(treenode->data);
+    level_order_travesal(treenode->leftChild,result,layer+1);
+    level_order_travesal(treenode->rightChild,result,layer+1);
 
 }
 template<typename T>
 void BST<T>::level_print(){
-    vector<vector<T>> result(root->level,vector<T>());
-    level_order_travesal(root,result,0,0,0);
+    vector<vector<T>> result(root->level);
+    level_order_travesal(root,result,0);
     int i=0;
     for(auto x:result){
         for (auto y:result[i]){
