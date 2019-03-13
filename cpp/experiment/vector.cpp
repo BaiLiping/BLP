@@ -4,7 +4,7 @@
 #include <bits/stdc++.h> 
 using namespace std;
 int main(){
-    vector<int> v{ 1, 5, 8, 9, 6, 7, 3, 4, 2, 0 }; 
+   /* vector<int> v{ 1, 5, 8, 9, 6, 7, 3, 4, 2, 0 }; 
     string s="";
     s.push_back('a');
     s.push_back('b');
@@ -20,6 +20,11 @@ int main(){
     for (auto x : v) 
         cout << x << " ";
     cout<<endl;
-  
+  */
+    vector<vector<int>> result(1);
+    result[0].push_back(3);
+    result[0][1]=4;
+    cout<<result[0][1]<<endl;
+    
     return 0;
 }
