@@ -84,6 +84,15 @@ git push
 (there are a lot more advanced topics in git such as version conflict, what if both of you works on the same portion of the master file? but for the time being, the above work flow and commands should be sufface)
 
 
+OBSERVATION:
+oversation on my working condition: 
+7-10 are the three hours that I can be extremely productive in recalling and should be used as such.
+
+a short break at around 10, 
+end the morning session at around 12
+
+a break would be worranted after lunch, take care of personal higyen and stuff, take a cup of coffee if needed.
+
 
 
 
