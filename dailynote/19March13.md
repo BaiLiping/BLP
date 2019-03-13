@@ -58,6 +58,23 @@ also in the h file, need to specify
 template  class<int>
 template
 
+8. git work flow:
+version control, testout the changes before merge them with the master.
+git config: provide your info regarding your commit;
+git diff: show the differences between current file and previous files;
+git init: to initialize a git tracking system on this particular depository, there would be a .git file in the repository;
+git branch branchname: create a branch. for instance today, I want to work on heap related topics, so I would create a branch called heap/ the idea of branch is that it can be tested before merged with master branch.
+git checkout master or branchname, switch between master and branch
+git checkout master, and git merge branchname
+git log, show all the commits: if you find yourself in a situation where the current things doesn't work and want to go back to previous version, that can be done.
+
+how to rollback back commits?
+to start a day's work, first create a branch of the master, such that this would be the starting point of your day.
+at that point, the state repository would be empty, and all the diff would be empty as well.
+in order to test out files, you will have to save them compile them, whenever it works, add and commit those changes.
+if there would be circumstances that the new changes messes up with the code, just do the following:
+git checkout filename
+this way, your code would be back to the last time you commited that file.
 
 
 
