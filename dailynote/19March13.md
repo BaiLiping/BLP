@@ -75,6 +75,13 @@ in order to test out files, you will have to save them compile them, whenever it
 if there would be circumstances that the new changes messes up with the code, just do the following:
 git checkout filename
 this way, your code would be back to the last time you commited that file.
+after a day's work, if everything in this branch works, we want to merge this branch to the master branch and them delete the branch.
+git checkout master
+git merge branchname
+git branch -d branchname
+(in a company repository, you do git pull before git push)
+git push
+(there are a lot more advanced topics in git such as version conflict, what if both of you works on the same portion of the master file? but for the time being, the above work flow and commands should be sufface)
 
 
 
