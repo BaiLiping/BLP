@@ -10,8 +10,8 @@ int main(){
     heap.print();
     heap.build_max_heap();
     heap.print();
-   // heap.heap_sort();
-   // heap.print();
+    heap.heap_sort();
+    heap.print();
 
     return 0;
 }

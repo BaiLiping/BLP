@@ -12,12 +12,13 @@ class HEAP{
         vector<T> data;
         //note that queue does not have iterator associated with it
         int length;
+        void decrease_len();
+        //the indexing can be a bit tricky if starting from zero. to make things easier, just starting from 1 instead.
+        int parent(int i){return i/2;}
+        int left(int i){return 2*i;}
+        int right(int i){return 2*i+1;}
         void max_heapify(int i);
         void swap(int i, int j);
-        void decrease_len();
-        int parent(int i){return (i+1)/2;}
-        int left(int i){return 2*i+1;}
-        int right(int i){return 2*i+2;}
         int len();
     public:
         HEAP();
