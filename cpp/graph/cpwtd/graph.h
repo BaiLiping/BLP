@@ -70,6 +70,7 @@
 #define MAIN_SAVITCH_GRAPH_H
 #include <cstdlib>  // Provides size_t
 #include <set>  
+#include <string>
 #include <algorithm>    // Provides set
 
 namespace main_savitch_15
@@ -106,7 +107,9 @@ namespace main_savitch_15
     protected:
         std::size_t allocated;
     };
+    template class graph<std::string>;
+    template class graph<int>;
+    template class graph<double>;
 }
 
-#include "graph.template" // Include the implementation.
 #endif

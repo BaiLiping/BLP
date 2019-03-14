@@ -12,7 +12,7 @@
 #include <set>
 #include <utility>
 #include "wtdgraph.h"
-
+#include "graph.h"
 using namespace std;
 using namespace main_savitch_15;
 

@@ -9,7 +9,6 @@
 #include <string>
 #include <queue>
 
-
 // Preconditions: distances and paths vectors are large
 // enough to contain g.size() elements, and start is less
 // than g.size().
