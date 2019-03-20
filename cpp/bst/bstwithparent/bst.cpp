@@ -124,3 +124,33 @@ void BST<T>::level_print(){
         cout<<endl;
     }
 }
+template<typename T>
+void BST<T>::Path(Node<T> * treenode, vector<T>& path, vector<vector<T>>& paths){
+    
+    if(treenode==NULL) return;
+    path.push_back(treenode->data);
+    if(treenode->leftChild==NULL&&treenode->rightChild==NULL){
+        paths.push_back(path);
+        return;
+    }
+    vector<T> path_left=path;
+    vector<T> path_right=path;
+    
+        Path(treenode->leftChild, path_left, paths);
+        Path(treenode->rightChild, path_right, paths);
+        //path.pop_back();
+}
+template<typename T>
+void BST<T>::path_print(){
+    vector<T> path;
+    vector<vector<T>> paths;
+    Path(root, path, paths);
+    int i=0;
+    for(auto x:paths){
+        for(auto y:paths[i]){
+            cout<<y<<" ";
+        }
+        ++i;
+        cout<<endl;
+    }
+}
