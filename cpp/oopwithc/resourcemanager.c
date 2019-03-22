@@ -29,7 +29,7 @@ void cleanup()__attribute__ ((destructor));
 //void cleanup(struct Point_Hander*, struct Point_Hander *);
 
 int i=0;
-struct Resource_Manager * ptr_list[];
+struct Resource_Manager * ptr_list[10];
 //here i used global variable to record all the resources allocated on heap, this might be the best implementation, but the only trick i have for the time being. the actual dtor code is implemented via assembly. first check if there are variables reside on the heap, if yes, then delete them.
 //generally speaking,stack is used for static variables, fixed size, and limited lifespan. Heap dynamically allocated variable can live long and can adjust, therefore, heap allocation is considerably costly when it comes to time. Why not a garbage collector? because the implementation of garbage collector is costly in terms of performance, so the standard commettee voted against it.
 
