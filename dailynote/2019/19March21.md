@@ -60,4 +60,4 @@ Like every dynamically balanced system, the key component is a mechanism for cou
 dark place, can't see the road ahead, or seeing other's being valued unproportionally, remind yourself that you don't know all the possibilities and should focus on polishing a skill instead of squandering energy on things that are out of your control.
 
 There is a mental state when I am extremely productive. Quietly following the lead to see the entire picture. My goal is to be there for as much time as possible, that call for selfmanagement techniques. I would summarize every technique comes my way as they happen.
-the first and formost: look the other way. If a particular way of looking at things is not constructive, keep looking at things that way would only drag yourself into a quagmire. Look the other way, much like the mechanism to counteract the dominant force, such that a dynamic balance is obtainable.
+
