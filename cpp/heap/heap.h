@@ -23,6 +23,9 @@ class HEAP{
     public:
         HEAP();
         HEAP(vector<T>);
+       //still need copy constructor
+        //still need move constructor
+        
         ~HEAP();
         void print();
         void build_max_heap();
