@@ -1,1 +1,1 @@
-THIS REPOSITORY IS TRACKS LEARNING OF CPP
+This repository belongs to Bai Liping.
