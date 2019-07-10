@@ -283,9 +283,11 @@ void run_cpu_from_memory_masked() {
 
 
   //get the phase-array from user
-  const uint32_t phased_array[3];
+  uint32_t phased_array[3];
   printf("pls enter the phased array: \n");
-  scanf("%d",phased_array);
+  for (int i=0;i<3;++i){
+	  scanf("%u",&phased_array[i]);
+	 }
   printf("you've entered: \n");
   
   for (int i=0;i<3;++i){
@@ -294,10 +296,10 @@ void run_cpu_from_memory_masked() {
 
   
   //setup the basic 3/2 pi wave
-  const uint32_t time_mul=745;
+  const uint32_t time_mul=375;
   const uint32_t n = 3*time_mul;
   uint32_t *gpio_data = (uint32_t*) malloc(n * sizeof(*gpio_data));
-  for (uint32_t i = 0; i <2; ++i) {
+  for (uint32_t i = 0; i <3; ++i) {
     // To toggle our pin, alternate between set and not set.
           gpio_data[i*time_mul] = (i % 2 == 0) ? 1 : 0;
           for (uint32_t j=1; j<time_mul; ++j){
@@ -311,7 +313,7 @@ void run_cpu_from_memory_masked() {
   const uint32_t mask1 = (1<<test1);
   const uint32_t mask2 = (1<<test2);  
   uint32_t *start = gpio_data; 
-  const uint32_t phase = 149;
+  const uint32_t phase = time_mul/5;
   
   //stepup starting pointer based on the phased_array
   
@@ -321,29 +323,51 @@ void run_cpu_from_memory_masked() {
  
   //the actual phased array wave
    const uint32_t wave_length=2*time_mul;
-   uint32_t *gpio_data_with_phase = (uint32_t*) malloc(wave_length * sizeof(*gpio_data_with_phase));
+   uint32_t *gpio_data_with_phase = (uint32_t*) malloc(2*wave_length * sizeof(*gpio_data_with_phase));
    uint32_t * st_ptr = gpio_data_with_phase;
 
  //initialize everything to zero
- for(int i=0;i<wave_length;++i){
+ for(uint32_t i=0;i<2*wave_length;++i){
 	 *(st_ptr+i)=0;
  }
- 
- //put clr_mask into the wave
-  for(int i=0;i<wave_length;++i){
+
+ //put set_mask into the wave
+  for(uint32_t i=0;i<wave_length;++i){
+  //clr_reg mask is on the even
+  //set_reg mask is on the odd
+  
+  //lookat the value pointed by it
   if(*it==0){
-	  *(st_ptr+i)=*(st_ptr+i) | mask;
-	  if(*it1==0){
-		  *(st_ptr+i)=*(st_ptr+i) | mask1;
-		  if(*it2==0){
-			  *(st_ptr+i)=*(st_ptr+i) | mask2;
-		  }//this belongs to if it2=0
-	  }//this belongs to if it1==0
-      }//this belongs to if it==0 
-   }//this belongs to wave_length for loop
+	  *(st_ptr+2*i)|=mask;
+  }
+  else{
+	  *(st_ptr+2*i+1)|=mask;
+  }
+  ++it;
+
+  //lookat the value pointed by it1
+  if(*it1==0){
+	  *(st_ptr+2*i)|=mask1;
+  }
+  else{
+	  *(st_ptr+2*i+1)|=mask1;
+  }
+  ++it1;
+
+  //lookat the value pointed by it2
+   if(*it2==0){
+	  *(st_ptr+2*i)|=mask2;
+  }
+  else{
+	  *(st_ptr+2*i+1)|=mask2;
+  }
+  ++it2;
+
+  }//this belongs to wave_length for loop
+
 
   
-//*/  //this is the end of phased_array data preparation
+ //this is the end of phased_array data preparation
   
   
   
@@ -364,18 +388,24 @@ void run_cpu_from_memory_masked() {
   //the following code set things up with phase
     
 // /* 
-  //initialize set_reg to be all on
-  *set_reg= mask | mask1 | mask2 ;
   
  //activate clr_reg mask based on the phased_array 
 //   const uint32_t mask = (1<<TOGGLE_GPIO);
 //   uint32_t *start = gpio_data; 
 
   for(;;){
+     
      uint32_t * ptr = gpio_data_with_phase;
      for(uint32_t step =0; step<wave_length ; ++ step){
-         *clr_reg=*(ptr+step);
+             *clr_reg=*(ptr+2*step);
+	     *set_reg=*(ptr+2*step+1);
+	     //*set_reg=*(ptr+step); //used for testing
      }
+     /* //the following code is used for testing
+     for(uint32_t step=wave_length;step<2*wave_length;++step){
+	     *clr_reg=*(ptr+step);
+     }
+     */
    }
 // */
 
