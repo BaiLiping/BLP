@@ -231,12 +231,14 @@ void run_cpu_direct() {
   for (;;) {
     
     for(int i=0;i<744;++i){
-	    *clr_reg=(1<<TOGGLE_GPIO);
+
+	    //stepup the register for multiple channels
+	    *clr_reg=(1<<TOGGLE_GPIO | 1<<test1 | 1<<test2);
 	    //*clr_reg=(1<<test1);
 	    //*clr_reg=(1<<test2);
     }
     for(int j=0;j<744;++j){
-	    *set_reg=(1<<TOGGLE_GPIO);
+	    *set_reg=(1<<TOGGLE_GPIO | 1<<test1 | 1 << test2);
             //*set_reg=(1<<test1);
 	    //*set_reg=(1<<test2);
     }
@@ -260,68 +262,120 @@ void run_cpu_from_memory_masked() {
   volatile uint32_t *set_reg = gpio_port + (GPIO_SET_OFFSET / sizeof(uint32_t));
   volatile uint32_t *clr_reg = gpio_port + (GPIO_CLR_OFFSET / sizeof(uint32_t));
 
-  // Prepare data
+
+  // Prepare data for unphased
   // to generate squarewave with 40kHZ
   const uint32_t time_mul=745;
   const uint32_t n = 2*time_mul;
   uint32_t *gpio_data = (uint32_t*) malloc(n * sizeof(*gpio_data));
   for (uint32_t i = 0; i <2; ++i) {
     // To toggle our pin, alternate between set and not set.
-	  
           gpio_data[i*time_mul] = (i % 2 == 0) ? 1 : 0;
-
           for (uint32_t j=1; j<time_mul; ++j){
 		  gpio_data[i*time_mul+j]=gpio_data[i*time_mul];
-	  
 	  }
   }
-  const int phase = 149;
 
+/*  
+  //the following prepare data for phased output
+
+
+  //get the phase-array from user
+  const uint32_t phased_array[3];
+  printf("pls enter the phased array: \n");
+  scanf("%d",phased_array);
+  printf("you've entered: \n");
+  
+  for (int i=0;i<3;++i){
+      printf("%d\n",phased_array[i]);
+  }
+
+  
+  //setup the basic 3/2 pi wave
+  const uint32_t time_mul=745;
+  const uint32_t n = 3*time_mul;
+  uint32_t *gpio_data = (uint32_t*) malloc(n * sizeof(*gpio_data));
+  for (uint32_t i = 0; i <2; ++i) {
+    // To toggle our pin, alternate between set and not set.
+          gpio_data[i*time_mul] = (i % 2 == 0) ? 1 : 0;
+          for (uint32_t j=1; j<time_mul; ++j){
+		  gpio_data[i*time_mul+j]=gpio_data[i*time_mul];
+	  }
+  }
+
+
+  //stepup the mask for TOGGLE_GPIO GPIO23 and GPIO24
+  const uint32_t mask = (1<<TOGGLE_GPIO);
+  const uint32_t mask1 = (1<<test1);
+  const uint32_t mask2 = (1<<test2);  
+  uint32_t *start = gpio_data; 
+  const uint32_t phase = 149;
+  
+  //stepup starting pointer based on the phased_array
+  
+  uint32_t * it = start+phased_array[0]*phase;
+  uint32_t * it1 = start+phased_array[1]*phase;
+  uint32_t * it2 = start+phased_array[2]*phase;
+ 
+  //the actual phased array wave
+   const uint32_t wave_length=2*time_mul;
+   uint32_t *gpio_data_with_phase = (uint32_t*) malloc(wave_length * sizeof(*gpio_data_with_phase));
+   uint32_t * st_ptr = gpio_data_with_phase;
+
+ //initialize everything to zero
+ for(int i=0;i<wave_length;++i){
+	 *(st_ptr+i)=0;
+ }
+ 
+ //put clr_mask into the wave
+  for(int i=0;i<wave_length;++i){
+  if(*it==0){
+	  *(st_ptr+i)=*(st_ptr+i) | mask;
+	  if(*it1==0){
+		  *(st_ptr+i)=*(st_ptr+i) | mask1;
+		  if(*it2==0){
+			  *(st_ptr+i)=*(st_ptr+i) | mask2;
+		  }//this belongs to if it2=0
+	  }//this belongs to if it1==0
+      }//this belongs to if it==0 
+   }//this belongs to wave_length for loop
+*/  //this is the end of phased_array data preparation
+  
+  
+  
   // Do it. Endless loop: reading, writing.
   printf("2) CPU: reading word from memory, write masked to GPIO set/clr.\n"
          "== Press Ctrl-C to exit.\n");
-  const uint32_t mask = (1<<TOGGLE_GPIO);
-  const uint32_t mask1 = (1<<test1);
-  const uint32_t mask2 = (1<<test2);
-  const uint32_t *start = gpio_data;
-  const uint32_t *end   = start + n;
+ //the following code woulds work fine for TOGGLE_GPIO
+  
+/* 
+ const uint32_t *end   = start + n;
   for (;;) {
-    uint32_t *it =start;
-    uint32_t *it1 = it+phase;
-    uint32_t *it2 = it+2*phase;
-    uint32_t step = 0;
-    if ( it < end) {
-      //if (( *it & mask) != 0) *set_reg =  *it & mask;
-      //if ((~*it & mask) != 0) *clr_reg = ~*it & mask;
-      //if (*it==1) *set_reg=mask;
-   // if (*it==0) {*clr_reg=mask;}  
-   // if (*it==1) {*set_reg=mask;}
-   //
-        if (*it==0) {
-		*clr_reg=mask;
-		if (*it1==0) {
-		   *clr_reg=mask1;
-		      if (*it2==0){
-		         *clr_reg=mask2;
-		      }
-		      else {*set_reg=mask2;}
-		}
-		else {*set_reg=mask1;}
-
-	
-	
-	}
-	else {*set_reg=mask;}
-
-        ++step;
-	++it;
-	if (step/(time_mul-phase)==0) {it1=start+phase+step%(time_mul-phase);}
-	else {it1=start+step%(time_mul-phase);}
-       	if (step/(time_mul-2*phase)==0) {it2=start+2*phase+step%(time_mul-2*phase);}
-	else {it2=start+step%(time_mul-2*phase);}
-
+    for (uint32_t * it = start;it < end;++it) {
+        if (*it==0) {*clr_reg=mask;}  
+        if (*it==1) {*set_reg=mask;}
     }
   }
+  */
+  //the following code set things up with phase
+    
+// /* 
+  //initialize set_reg to be all on
+ // *set_reg= mask | mask1 | mask2 ;
+  
+ //activate clr_reg mask based on the phased_array 
+   const uint32_t mask = (1<<TOGGLE_GPIO);
+   uint32_t *start = gpio_data; 
+
+  for(;;){
+     uint32_t * it = start;
+     for(int step =0; step<2*time_mul ; ++ step){
+         if (*(it+step)==0) {*clr_reg=mask;}  
+         if (*(it+step)==1) {*set_reg=mask;}
+     }
+
+   }
+// */
 
   free(gpio_data);  // (though never reached due to Ctrl-C)
 }
