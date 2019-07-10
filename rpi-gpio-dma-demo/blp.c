@@ -262,7 +262,7 @@ void run_cpu_from_memory_masked() {
   volatile uint32_t *set_reg = gpio_port + (GPIO_SET_OFFSET / sizeof(uint32_t));
   volatile uint32_t *clr_reg = gpio_port + (GPIO_CLR_OFFSET / sizeof(uint32_t));
 
-
+/*
   // Prepare data for unphased
   // to generate squarewave with 40kHZ
   const uint32_t time_mul=745;
@@ -276,7 +276,9 @@ void run_cpu_from_memory_masked() {
 	  }
   }
 
-/*  
+*/
+
+///*  
   //the following prepare data for phased output
 
 
@@ -339,7 +341,9 @@ void run_cpu_from_memory_masked() {
 	  }//this belongs to if it1==0
       }//this belongs to if it==0 
    }//this belongs to wave_length for loop
-*/  //this is the end of phased_array data preparation
+
+  
+//*/  //this is the end of phased_array data preparation
   
   
   
@@ -361,23 +365,22 @@ void run_cpu_from_memory_masked() {
     
 // /* 
   //initialize set_reg to be all on
- // *set_reg= mask | mask1 | mask2 ;
+  *set_reg= mask | mask1 | mask2 ;
   
  //activate clr_reg mask based on the phased_array 
-   const uint32_t mask = (1<<TOGGLE_GPIO);
-   uint32_t *start = gpio_data; 
+//   const uint32_t mask = (1<<TOGGLE_GPIO);
+//   uint32_t *start = gpio_data; 
 
   for(;;){
-     uint32_t * it = start;
-     for(int step =0; step<2*time_mul ; ++ step){
-         if (*(it+step)==0) {*clr_reg=mask;}  
-         if (*(it+step)==1) {*set_reg=mask;}
+     uint32_t * ptr = gpio_data_with_phase;
+     for(uint32_t step =0; step<wave_length ; ++ step){
+         *clr_reg=*(ptr+step);
      }
-
    }
 // */
 
   free(gpio_data);  // (though never reached due to Ctrl-C)
+  free(gpio_data_with_phase);
 }
 
 /*

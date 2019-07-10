@@ -5,6 +5,6 @@ PI_VERSION ?= 2
 CFLAGS=-O3 -W -Wall -std=c99 -D_XOPEN_SOURCE=500 -g -DPI_VERSION=$(PI_VERSION)
 
 gpio-dma-test: gpio-dma-test.o mailbox.o
-
+gpio-dma-test.o:blp.c
 clean:
 	rm -f gpio-dma-test *.o
