@@ -1,0 +1,204 @@
+###############################################################################
+#
+# IAR ELF Linker V8.32.2.178/W32 for ARM                  11/Jul/2019  00:06:08
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array\Debug\Exe\Phased_Array.out
+#    Map file     =  
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array\Debug\List\Phased_Array.map
+#    Command line =  
+#        -f C:\Users\ADMINI~1\AppData\Local\Temp\EW9D7C.tmp
+#        (C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array\Debug\Obj\main.o
+#        --no_out_extension -o
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array\Debug\Exe\Phased_Array.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array\Debug\List\Phased_Array.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.2_2\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__Heap_Handler  = NoFree
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The no free heap was selected because no calls to memory
+deallocation functions were found in the application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x3'ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
+          rw, block CSTACK, block HEAP };
+
+  Section          Kind         Address    Size  Object
+  -------          ----         -------    ----  ------
+"A0":                                      0x40
+  .intvec          ro code          0x0    0x40  vector_table_M.o [4]
+                                 - 0x40    0x40
+
+"P1":                                     0x278
+  .text            ro code         0x40   0x118  main.o [1]
+  .text            ro code        0x158    0x48  no_free_heap0.o [2]
+  .text            ro code        0x1a0    0x2c  xgetmemchunk.o [2]
+  .text            ro code        0x1cc    0x3a  zero_init3.o [4]
+  .text            ro code        0x206     0x2  vector_table_M.o [4]
+  .text            ro code        0x208    0x28  data_init.o [4]
+  .text            ro code        0x230    0x22  fpinit_M.o [3]
+  .iar.init_table  const          0x254    0x10  - Linker created -
+  .text            ro code        0x264    0x1e  cmain.o [4]
+  .text            ro code        0x282     0x4  low_level_init.o [2]
+  .text            ro code        0x286     0x4  exit.o [2]
+  .text            ro code        0x28c     0xa  cexit.o [4]
+  .text            ro code        0x298    0x14  exit.o [5]
+  .text            ro code        0x2ac     0xc  cstartup_M.o [4]
+  .rodata          const          0x2b8     0x0  zero_init3.o [4]
+                                - 0x2b8   0x278
+
+"P2", part 1 of 2:                          0x8
+  .bss             zero     0x2000'0000     0x4  no_free_heap0.o [2]
+  .bss             zero     0x2000'0004     0x4  xgetmemchunk.o [2]
+                          - 0x2000'0008     0x8
+
+"P2", part 2 of 2:                       0x3000
+  CSTACK                    0x2000'0008  0x1000  <Block>
+    CSTACK         uninit   0x2000'0008  0x1000  <Block tail>
+  HEAP                      0x2000'1008  0x2000  <Block>
+    HEAP           uninit   0x2000'1008  0x2000  <Block tail>
+                          - 0x2000'3008  0x3000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x2b8     0x3'ffff  0x3'fd48
+  0x2000'3008  0x2000'7fff    0x4ff8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x8:
+          0x2000'0000   0x8
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+command line/config:
+    -------------------------------------------
+    Total:
+
+C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array\Debug\Obj: [1]
+    main.o                280
+    -------------------------------------------
+    Total:                280
+
+dl7M_tln.a: [2]
+    exit.o                  4
+    low_level_init.o        4
+    no_free_heap0.o        72                 4
+    xgetmemchunk.o         44                 4
+    -------------------------------------------
+    Total:                124                 8
+
+m7M_tls.a: [3]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
+
+rt7M_tl.a: [4]
+    cexit.o                10
+    cmain.o                30
+    cstartup_M.o           12
+    data_init.o            40
+    vector_table_M.o       66
+    zero_init3.o           58
+    -------------------------------------------
+    Total:                216
+
+shb_l.a: [5]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    4        2
+    Linker created                  16   12 288
+-----------------------------------------------
+    Grand Total:          678       18   12 296
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base         0x254          --   Gb  - Linker created -
+.iar.init_table$$Limit        0x264          --   Gb  - Linker created -
+?main                         0x265         Code  Gb  cmain.o [4]
+CSTACK$$Base            0x2000'0008          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'1008          --   Gb  - Linker created -
+HEAP$$Base              0x2000'1008          --   Gb  - Linker created -
+HEAP$$Limit             0x2000'3008          --   Gb  - Linker created -
+Region$$Table$$Base           0x254          --   Gb  - Linker created -
+Region$$Table$$Limit          0x264          --   Gb  - Linker created -
+__cmain                       0x265         Code  Gb  cmain.o [4]
+__data_GetMemChunk            0x1a1   0x2c  Code  Gb  xgetmemchunk.o [2]
+__data_GetMemChunk::start
+                        0x2000'0004    0x4  Data  Lc  xgetmemchunk.o [2]
+__exit                        0x299   0x14  Code  Gb  exit.o [5]
+__iar_data_init3              0x209   0x28  Code  Gb  data_init.o [4]
+__iar_init_vfp                0x231         Code  Gb  fpinit_M.o [3]
+__iar_program_start           0x2ad         Code  Gb  cstartup_M.o [4]
+__iar_zero_init3              0x1cd   0x3a  Code  Gb  zero_init3.o [4]
+__low_level_init              0x283    0x4  Code  Gb  low_level_init.o [2]
+__no_free_malloc              0x159   0x44  Code  Gb  no_free_heap0.o [2]
+__vector_table                  0x0         Data  Gb  vector_table_M.o [4]
+_call_main                    0x271         Code  Gb  cmain.o [4]
+_exit                         0x28d         Code  Gb  cexit.o [4]
+_main                         0x27f         Code  Gb  cmain.o [4]
+exit                          0x287    0x4  Code  Gb  exit.o [2]
+main                           0x41  0x118  Code  Gb  main.o [1]
+qs                      0x2000'0000    0x4  Data  Lc  no_free_heap0.o [2]
+
+
+[1] = C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array\Debug\Obj
+[2] = dl7M_tln.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+     678 bytes of readonly  code memory
+      18 bytes of readonly  data memory
+  12 296 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

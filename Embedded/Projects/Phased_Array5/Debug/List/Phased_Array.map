@@ -1,0 +1,216 @@
+###############################################################################
+#
+# IAR ELF Linker V8.32.2.178/W32 for ARM                  16/Jul/2019  11:36:40
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array5\Debug\Exe\Phased_Array.out
+#    Map file     =  
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array5\Debug\List\Phased_Array.map
+#    Command line =  
+#        -f C:\Users\ADMINI~1\AppData\Local\Temp\EW4BE.tmp
+#        (C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array5\Debug\Obj\Board.o
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array5\Debug\Obj\main.o
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array5\Debug\Obj\Phase.o
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array5\Debug\Obj\UART.o
+#        --no_out_extension -o
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array5\Debug\Exe\Phased_Array.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array5\Debug\List\Phased_Array.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.2_2\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__Heap_Handler  = NoFree
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The no free heap was selected because no calls to memory
+deallocation functions were found in the application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x3'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block HEAP with size = 1K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
+          rw, block CSTACK, block HEAP };
+
+  Section          Kind         Address   Size  Object
+  -------          ----         -------   ----  ------
+"A0":                                     0x40
+  .intvec          ro code          0x0   0x40  vector_table_M.o [3]
+                                 - 0x40   0x40
+
+"P1":                                    0x32c
+  .text            ro code         0x40  0x104  Phase.o [1]
+  .text            ro code        0x144   0x48  no_free_heap0.o [2]
+  .text            ro code        0x18c   0x2c  xgetmemchunk.o [2]
+  .text            ro code        0x1b8   0x5c  UART.o [1]
+  .text            ro code        0x214   0x58  Board.o [1]
+  .text            ro code        0x26c   0x3a  zero_init3.o [3]
+  .text            ro code        0x2a6    0x2  vector_table_M.o [3]
+  .text            ro code        0x2a8   0x30  main.o [1]
+  .text            ro code        0x2d8   0x28  data_init.o [3]
+  .iar.init_table  const          0x300   0x10  - Linker created -
+  .text            ro code        0x310   0x1e  cmain.o [3]
+  .text            ro code        0x32e    0x4  low_level_init.o [2]
+  .text            ro code        0x332    0x4  exit.o [2]
+  .text            ro code        0x338    0xa  cexit.o [3]
+  .text            ro code        0x344   0x14  exit.o [4]
+  .text            ro code        0x358    0xc  cstartup_M.o [3]
+  .rodata          const          0x364    0x4  main.o [1]
+  .rodata          const          0x368    0x4  main.o [1]
+  .rodata          const          0x36c    0x0  zero_init3.o [3]
+                                - 0x36c  0x32c
+
+"P2", part 1 of 2:                        0x58
+  .bss             zero     0x2000'0000   0x28  main.o [1]
+  .bss             zero     0x2000'0028   0x28  main.o [1]
+  .bss             zero     0x2000'0050    0x4  no_free_heap0.o [2]
+  .bss             zero     0x2000'0054    0x4  xgetmemchunk.o [2]
+                          - 0x2000'0058   0x58
+
+"P2", part 2 of 2:                       0x800
+  CSTACK                    0x2000'0058  0x400  <Block>
+    CSTACK         uninit   0x2000'0058  0x400  <Block tail>
+  HEAP                      0x2000'0458  0x400  <Block>
+    HEAP           uninit   0x2000'0458  0x400  <Block tail>
+                          - 0x2000'0858  0x800
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x36c     0x3'ffff  0x3'fc94
+  0x2000'0858  0x2000'7fff    0x77a8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x58:
+          0x2000'0000  0x58
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+command line/config:
+    -------------------------------------------
+    Total:
+
+C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array5\Debug\Obj: [1]
+    Board.o                88
+    Phase.o               260
+    UART.o                 92
+    main.o                 48        8       80
+    -------------------------------------------
+    Total:                488        8       80
+
+dl7M_tln.a: [2]
+    exit.o                  4
+    low_level_init.o        4
+    no_free_heap0.o        72                 4
+    xgetmemchunk.o         44                 4
+    -------------------------------------------
+    Total:                124                 8
+
+rt7M_tl.a: [3]
+    cexit.o                10
+    cmain.o                30
+    cstartup_M.o           12
+    data_init.o            40
+    vector_table_M.o       66
+    zero_init3.o           58
+    -------------------------------------------
+    Total:                216
+
+shb_l.a: [4]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    4
+    Linker created                  16    2 048
+-----------------------------------------------
+    Grand Total:          852       24    2 136
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base         0x300          --   Gb  - Linker created -
+.iar.init_table$$Limit        0x310          --   Gb  - Linker created -
+?main                         0x311         Code  Gb  cmain.o [3]
+CSTACK$$Base            0x2000'0058          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0458          --   Gb  - Linker created -
+HEAP$$Base              0x2000'0458          --   Gb  - Linker created -
+HEAP$$Limit             0x2000'0858          --   Gb  - Linker created -
+Init_Board                    0x215   0x58  Code  Gb  Board.o [1]
+Init_UART1                    0x1b9   0x5c  Code  Gb  UART.o [1]
+Phased                         0x41  0x104  Code  Gb  Phase.o [1]
+Region$$Table$$Base           0x300          --   Gb  - Linker created -
+Region$$Table$$Limit          0x310          --   Gb  - Linker created -
+__cmain                       0x311         Code  Gb  cmain.o [3]
+__data_GetMemChunk            0x18d   0x2c  Code  Gb  xgetmemchunk.o [2]
+__data_GetMemChunk::start
+                        0x2000'0054    0x4  Data  Lc  xgetmemchunk.o [2]
+__exit                        0x345   0x14  Code  Gb  exit.o [4]
+__iar_data_init3              0x2d9   0x28  Code  Gb  data_init.o [3]
+__iar_program_start           0x359         Code  Gb  cstartup_M.o [3]
+__iar_zero_init3              0x26d   0x3a  Code  Gb  zero_init3.o [3]
+__low_level_init              0x32f    0x4  Code  Gb  low_level_init.o [2]
+__no_free_malloc              0x145   0x44  Code  Gb  no_free_heap0.o [2]
+__vector_table                  0x0         Data  Gb  vector_table_M.o [3]
+_call_main                    0x31d         Code  Gb  cmain.o [3]
+_exit                         0x339         Code  Gb  cexit.o [3]
+_main                         0x32b         Code  Gb  cmain.o [3]
+exit                          0x333    0x4  Code  Gb  exit.o [2]
+half_wave                     0x364    0x4  Data  Gb  main.o [1]
+iterators               0x2000'0028   0x28  Data  Gb  main.o [1]
+main                          0x2a9   0x30  Code  Gb  main.o [1]
+number_of_transducers         0x368    0x4  Data  Gb  main.o [1]
+phased_array            0x2000'0000   0x28  Data  Gb  main.o [1]
+qs                      0x2000'0050    0x4  Data  Lc  no_free_heap0.o [2]
+
+
+[1] = C:\Users\Administrator\Desktop\Embeded\Projects\Phased_Array5\Debug\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+    852 bytes of readonly  code memory
+     24 bytes of readonly  data memory
+  2 136 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,235 @@
+###############################################################################
+#
+# IAR ELF Linker V8.32.2.178/W32 for ARM                  05/Jan/2019  15:48:45
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Jan_5\Debug\Exe\Embedded_System_Basics.out
+#    Map file     =  
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Jan_5\Debug\List\Embedded_System_Basics.map
+#    Command line =  
+#        -f C:\Users\ADMINI~1\AppData\Local\Temp\EW4354.tmp
+#        (C:\Users\Administrator\Desktop\Embeded\Projects\Jan_5\Debug\Obj\bsp.o
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Jan_5\Debug\Obj\GPIO.o
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Jan_5\Debug\Obj\main.o
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Jan_5\Debug\Obj\Periodic_Interrupt.o
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Jan_5\Debug\Obj\PLL.o
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Jan_5\Debug\Obj\PortF_Interrupt.o
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Jan_5\Debug\Obj\startup_tm4c.o
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Jan_5\Debug\Obj\Systick.o
+#        --no_out_extension -o
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Jan_5\Debug\Exe\Embedded_System_Basics.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        C:\Users\Administrator\Desktop\Embeded\Projects\Jan_5\Debug\List\Embedded_System_Basics.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.2_2\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x3'ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
+          rw, block CSTACK, block HEAP };
+
+  Section          Kind         Address    Size  Object
+  -------          ----         -------    ----  ------
+"A0":                                     0x210
+  .intvec          const            0x0   0x210  startup_tm4c.o [1]
+                                - 0x210   0x210
+
+"P1":                                     0x55c
+  .text            ro code        0x210   0x298  GPIO.o [1]
+  .text            ro code        0x4a8    0x78  bsp.o [1]
+  .text            ro code        0x520    0x1c  Periodic_Interrupt.o [1]
+  .text            ro code        0x53c    0x6c  PLL.o [1]
+  .text            ro code        0x5a8    0x54  startup_tm4c.o [1]
+  .text            ro code        0x5fc    0x3a  zero_init3.o [4]
+  .text            ro code        0x638    0x28  Systick.o [1]
+  .text            ro code        0x660    0x28  data_init.o [4]
+  .text            ro code        0x688    0x22  fpinit_M.o [3]
+  .iar.init_table  const          0x6ac    0x10  - Linker created -
+  .text            ro code        0x6bc    0x20  main.o [1]
+  .text            ro code        0x6dc    0x1e  cmain.o [4]
+  .text            ro code        0x6fa     0x4  low_level_init.o [2]
+  .text            ro code        0x6fe     0x4  exit.o [2]
+  .text            ro code        0x704     0xa  cexit.o [4]
+  .text            ro code        0x710    0x14  exit.o [5]
+  .rodata          const          0x724     0xc  startup_tm4c.o [1]
+  .rodata          const          0x730     0xc  startup_tm4c.o [1]
+  .rodata          const          0x73c     0xc  startup_tm4c.o [1]
+  .rodata          const          0x748     0xc  startup_tm4c.o [1]
+  .text            ro code        0x754     0xc  cstartup_M.o [4]
+  .rodata          const          0x760     0x8  startup_tm4c.o [1]
+  .rodata          const          0x768     0x4  startup_tm4c.o [1]
+  .rodata          const          0x76c     0x0  zero_init3.o [4]
+                                - 0x76c   0x55c
+
+"P2", part 1 of 2:                          0x8
+  .bss             zero     0x2000'0000     0x4  bsp.o [1]
+  .bss             zero     0x2000'0004     0x4  bsp.o [1]
+                          - 0x2000'0008     0x8
+
+"P2", part 2 of 2:                       0x1000
+  CSTACK                    0x2000'0008  0x1000  <Block>
+    CSTACK         uninit   0x2000'0008  0x1000  <Block tail>
+                          - 0x2000'1008  0x1000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x76c     0x3'ffff  0x3'f894
+  0x2000'1008  0x2000'7fff    0x6ff8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x8:
+          0x2000'0000   0x8
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                ro code  ro data  rw data
+    ------                -------  -------  -------
+command line/config:
+    -----------------------------------------------
+    Total:
+
+C:\Users\Administrator\Desktop\Embeded\Projects\Jan_5\Debug\Obj: [1]
+    GPIO.o                    664
+    PLL.o                     108
+    Periodic_Interrupt.o       28
+    Systick.o                  40
+    bsp.o                     120                 8
+    main.o                     32
+    startup_tm4c.o             84      588
+    -----------------------------------------------
+    Total:                  1 076      588        8
+
+dl7M_tln.a: [2]
+    exit.o                      4
+    low_level_init.o            4
+    -----------------------------------------------
+    Total:                      8
+
+m7M_tls.a: [3]
+    fpinit_M.o                 34
+    -----------------------------------------------
+    Total:                     34
+
+rt7M_tl.a: [4]
+    cexit.o                    10
+    cmain.o                    30
+    cstartup_M.o               12
+    data_init.o                40
+    zero_init3.o               58
+    -----------------------------------------------
+    Total:                    150
+
+shb_l.a: [5]
+    exit.o                     20
+    -----------------------------------------------
+    Total:                     20
+
+    Gaps                        6        2
+    Linker created                      16    4 096
+---------------------------------------------------
+    Grand Total:            1 294      606    4 104
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base         0x6ac          --   Gb  - Linker created -
+.iar.init_table$$Limit        0x6bc          --   Gb  - Linker created -
+?main                         0x6dd         Code  Gb  cmain.o [4]
+BusFault_Handler              0x5c7    0xa  Code  Gb  startup_tm4c.o [1]
+CSTACK$$Base            0x2000'0008          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'1008         Data  Gb  - Linker created -
+EnableInterrupts              0x51d    0x4  Code  Gb  bsp.o [1]
+GPIOPortF_IRQHandler          0x4e9   0x1c  Code  Gb  bsp.o [1]
+GPIO_Port_DIGITAL_Init        0x211  0x1f8  Code  Gb  GPIO.o [1]
+HardFault_Handler             0x5a9    0xa  Code  Gb  startup_tm4c.o [1]
+MemManage_Handler             0x5bd    0xa  Code  Gb  startup_tm4c.o [1]
+NMI_Handler                   0x5b3    0xa  Code  Gb  startup_tm4c.o [1]
+PLL_Init                      0x53d   0x6c  Code  Gb  PLL.o [1]
+Region$$Table$$Base           0x6ac          --   Gb  - Linker created -
+Region$$Table$$Limit          0x6bc          --   Gb  - Linker created -
+SysTick_Handler               0x4b5   0x34  Code  Gb  bsp.o [1]
+SysTick_Init                  0x639   0x28  Code  Gb  Systick.o [1]
+Unused_Handler                0x5db    0xa  Code  Gb  startup_tm4c.o [1]
+UsageFault_Handler            0x5d1    0xa  Code  Gb  startup_tm4c.o [1]
+__cmain                       0x6dd         Code  Gb  cmain.o [4]
+__exit                        0x711   0x14  Code  Gb  exit.o [5]
+__iar_data_init3              0x661   0x28  Code  Gb  data_init.o [4]
+__iar_init_vfp                0x689         Code  Gb  fpinit_M.o [3]
+__iar_program_start           0x755         Code  Gb  cstartup_M.o [4]
+__iar_zero_init3              0x5fd   0x3a  Code  Gb  zero_init3.o [4]
+__low_level_init              0x6fb    0x4  Code  Gb  low_level_init.o [2]
+__vector_table                  0x0  0x210  Data  Gb  startup_tm4c.o [1]
+_call_main                    0x6e9         Code  Gb  cmain.o [4]
+_exit                         0x705         Code  Gb  cexit.o [4]
+_main                         0x6f7         Code  Gb  cmain.o [4]
+assert_failed                 0x4a9    0xc  Code  Gb  bsp.o [1]
+count                   0x2000'0000    0x4  Data  Gb  bsp.o [1]
+disable_periodic_interrupt
+                              0x52d    0xa  Code  Gb  Periodic_Interrupt.o [1]
+enable_periodic_interrupt
+                              0x521    0xc  Code  Gb  Periodic_Interrupt.o [1]
+exit                          0x6ff    0x4  Code  Gb  exit.o [2]
+experiment_port_init          0x409   0x36  Code  Gb  GPIO.o [1]
+main                          0x6bd   0x20  Code  Gb  main.o [1]
+n                       0x2000'0004    0x4  Data  Gb  bsp.o [1]
+
+
+[1] = C:\Users\Administrator\Desktop\Embeded\Projects\Jan_5\Debug\Obj
+[2] = dl7M_tln.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+  1 294 bytes of readonly  code memory
+    606 bytes of readonly  data memory
+  4 104 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

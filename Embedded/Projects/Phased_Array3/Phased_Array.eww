@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\..\Phased_Array4\Phase_Array4.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\Phased_Array.ewp</path>
+    </project>
+    <batchBuild />
+</workspace>
