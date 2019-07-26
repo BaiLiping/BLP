@@ -1,0 +1,15 @@
+Added Net: Name=1+
+Added Net: Name=1-
+Added Net: Name=2+
+Added Net: Name=2-
+Added Net: Name=3+
+Added Net: Name=3-
+Added Net: Name=GND
+Added Net: Name=Net*?_2
+Added Net: Name=Net*?
+Added Net: Name=Net*
+Added Net: Name=VDD
+Added Class: Name=Final Design
+Added Class: Name=Sheet1
+Added Room: Name=Final Design
+Added Room: Name=Sheet1

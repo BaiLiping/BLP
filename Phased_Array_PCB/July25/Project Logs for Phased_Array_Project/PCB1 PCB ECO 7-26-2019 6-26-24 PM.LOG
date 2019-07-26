@@ -1,0 +1,252 @@
+Removed Pin From Net: NetName=1- Pin=Connector1-5
+Removed Pin From Net: NetName=2- Pin=Connector1-6
+Removed Pin From Net: NetName=3- Pin=Connector1-7
+Removed Pin From Net: NetName=4- Pin=Connector1-8
+Removed Pin From Net: NetName=5- Pin=Connector2-5
+Removed Pin From Net: NetName=6- Pin=Connector2-6
+Removed Pin From Net: NetName=7- Pin=Connector2-7
+Removed Pin From Net: NetName=8- Pin=Connector2-8
+Removed Pin From Net: NetName=9- Pin=Connector3-5
+Removed Pin From Net: NetName=10- Pin=Connector3-6
+Removed Pin From Net: NetName=11- Pin=Connector3-7
+Removed Pin From Net: NetName=12- Pin=Connector3-8
+Added Component: Designator=13.1(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=13.2(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=13(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=14(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=15(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=16(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=17(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=18(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=19(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=20(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=21(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=22(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=23(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=24(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=?(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Connector?(Connector)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Connector?(Connector)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Connector?(Connector)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=13-3
+Added Pin To Net: NetName=2 Pin=14-2
+Added Pin To Net: NetName=GND Pin=14-3
+Added Pin To Net: NetName=2 Pin=14-4
+Added Pin To Net: NetName=2- Pin=14-5
+Added Pin To Net: NetName=2+ Pin=14-7
+Added Pin To Net: NetName=3 Pin=15-2
+Added Pin To Net: NetName=GND Pin=15-3
+Added Pin To Net: NetName=3 Pin=15-4
+Added Pin To Net: NetName=3- Pin=15-5
+Added Pin To Net: NetName=3+ Pin=15-7
+Added Pin To Net: NetName=4 Pin=16-2
+Added Pin To Net: NetName=GND Pin=16-3
+Added Pin To Net: NetName=4 Pin=16-4
+Added Pin To Net: NetName=4- Pin=16-5
+Added Pin To Net: NetName=4+ Pin=16-7
+Added Pin To Net: NetName=5 Pin=17-2
+Added Pin To Net: NetName=GND Pin=17-3
+Added Pin To Net: NetName=5 Pin=17-4
+Added Pin To Net: NetName=5- Pin=17-5
+Added Pin To Net: NetName=5+ Pin=17-7
+Added Pin To Net: NetName=6 Pin=18-2
+Added Pin To Net: NetName=GND Pin=18-3
+Added Pin To Net: NetName=6 Pin=18-4
+Added Pin To Net: NetName=6- Pin=18-5
+Added Pin To Net: NetName=6+ Pin=18-7
+Added Pin To Net: NetName=7 Pin=19-2
+Added Pin To Net: NetName=GND Pin=19-3
+Added Pin To Net: NetName=7 Pin=19-4
+Added Pin To Net: NetName=7- Pin=19-5
+Added Pin To Net: NetName=7+ Pin=19-7
+Added Pin To Net: NetName=8 Pin=20-2
+Added Pin To Net: NetName=GND Pin=20-3
+Added Pin To Net: NetName=8 Pin=20-4
+Added Pin To Net: NetName=8- Pin=20-5
+Added Pin To Net: NetName=8+ Pin=20-7
+Added Pin To Net: NetName=9 Pin=21-2
+Added Pin To Net: NetName=GND Pin=21-3
+Added Pin To Net: NetName=9 Pin=21-4
+Added Pin To Net: NetName=9- Pin=21-5
+Added Pin To Net: NetName=9+ Pin=21-7
+Added Pin To Net: NetName=10 Pin=22-2
+Added Pin To Net: NetName=GND Pin=22-3
+Added Pin To Net: NetName=10 Pin=22-4
+Added Pin To Net: NetName=10- Pin=22-5
+Added Pin To Net: NetName=10+ Pin=22-7
+Added Pin To Net: NetName=11 Pin=23-2
+Added Pin To Net: NetName=GND Pin=23-3
+Added Pin To Net: NetName=11 Pin=23-4
+Added Pin To Net: NetName=11- Pin=23-5
+Added Pin To Net: NetName=11+ Pin=23-7
+Added Pin To Net: NetName=12 Pin=24-2
+Added Pin To Net: NetName=GND Pin=24-3
+Added Pin To Net: NetName=12 Pin=24-4
+Added Pin To Net: NetName=12- Pin=24-5
+Added Pin To Net: NetName=12+ Pin=24-7
+Added Pin To Net: NetName=4- Pin=Connector1-5
+Added Pin To Net: NetName=3- Pin=Connector1-6
+Added Pin To Net: NetName=2- Pin=Connector1-7
+Added Pin To Net: NetName=1- Pin=Connector1-8
+Added Pin To Net: NetName=8- Pin=Connector2-5
+Added Pin To Net: NetName=7- Pin=Connector2-6
+Added Pin To Net: NetName=6- Pin=Connector2-7
+Added Pin To Net: NetName=5- Pin=Connector2-8
+Added Pin To Net: NetName=12- Pin=Connector3-5
+Added Pin To Net: NetName=11- Pin=Connector3-6
+Added Pin To Net: NetName=10- Pin=Connector3-7
+Added Pin To Net: NetName=9- Pin=Connector3-8
+Added Pin To Net: NetName=1+ Pin=Connector?-1
+Added Pin To Net: NetName=5+ Pin=Connector?-1
+Added Pin To Net: NetName=9+ Pin=Connector?-1
+Added Pin To Net: NetName=2+ Pin=Connector?-2
+Added Pin To Net: NetName=6+ Pin=Connector?-2
+Added Pin To Net: NetName=10+ Pin=Connector?-2
+Added Pin To Net: NetName=3+ Pin=Connector?-3
+Added Pin To Net: NetName=7+ Pin=Connector?-3
+Added Pin To Net: NetName=11+ Pin=Connector?-3
+Added Pin To Net: NetName=4+ Pin=Connector?-4
+Added Pin To Net: NetName=8+ Pin=Connector?-4
+Added Pin To Net: NetName=12+ Pin=Connector?-4
+Added Pin To Net: NetName=4- Pin=Connector?-5
+Added Pin To Net: NetName=8- Pin=Connector?-5
+Added Pin To Net: NetName=12- Pin=Connector?-5
+Added Pin To Net: NetName=3- Pin=Connector?-6
+Added Pin To Net: NetName=7- Pin=Connector?-6
+Added Pin To Net: NetName=11- Pin=Connector?-6
+Added Pin To Net: NetName=2- Pin=Connector?-7
+Added Pin To Net: NetName=6- Pin=Connector?-7
+Added Pin To Net: NetName=10- Pin=Connector?-7
+Added Pin To Net: NetName=1- Pin=Connector?-8
+Added Pin To Net: NetName=5- Pin=Connector?-8
+Added Pin To Net: NetName=9- Pin=Connector?-8
+Added Pin To Net: NetName=13+ Pin=13-7
+Added Net: Name=13+
+Added Pin To Net: NetName=13- Pin=13-5
+Added Net: Name=13-
+Added Pin To Net: NetName=13 Pin=13-2
+Added Pin To Net: NetName=13 Pin=13-4
+Added Net: Name=13
+Added Pin To Net: NetName=Net13_6 Pin=13-6
+Added Net: Name=Net13_6
+Added Pin To Net: NetName=Net14_6 Pin=14-6
+Added Net: Name=Net14_6
+Added Pin To Net: NetName=Net15_6 Pin=15-6
+Added Net: Name=Net15_6
+Added Pin To Net: NetName=Net16_6 Pin=16-6
+Added Net: Name=Net16_6
+Added Pin To Net: NetName=Net17_6 Pin=17-6
+Added Net: Name=Net17_6
+Added Pin To Net: NetName=Net18_6 Pin=18-6
+Added Net: Name=Net18_6
+Added Pin To Net: NetName=Net19_6 Pin=19-6
+Added Net: Name=Net19_6
+Added Pin To Net: NetName=Net20_6 Pin=20-6
+Added Net: Name=Net20_6
+Added Pin To Net: NetName=Net21_6 Pin=21-6
+Added Net: Name=Net21_6
+Added Pin To Net: NetName=Net22_6 Pin=22-6
+Added Net: Name=Net22_6
+Added Pin To Net: NetName=Net23_6 Pin=23-6
+Added Net: Name=Net23_6
+Added Pin To Net: NetName=Net24_6 Pin=24-6
+Added Net: Name=Net24_6
+Added Member To Class: ClassName=Final Design Member=Component 13.1 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 13.2 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 13 TC4428
+Added Member To Class: ClassName=Final Design Member=Component 14 TC4428
+Added Member To Class: ClassName=Final Design Member=Component 15 TC4428
+Added Member To Class: ClassName=Final Design Member=Component 16 TC4428
+Added Member To Class: ClassName=Final Design Member=Component 17 TC4428
+Added Member To Class: ClassName=Final Design Member=Component 18 TC4428
+Added Member To Class: ClassName=Final Design Member=Component 19 TC4428
+Added Member To Class: ClassName=Final Design Member=Component 20 TC4428
+Added Member To Class: ClassName=Final Design Member=Component 21 TC4428
+Added Member To Class: ClassName=Final Design Member=Component 22 TC4428
+Added Member To Class: ClassName=Final Design Member=Component 23 TC4428
+Added Member To Class: ClassName=Final Design Member=Component 24 TC4428
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component ? Capacitor
+Added Member To Class: ClassName=Final Design Member=Component Connector? Connector
+Added Member To Class: ClassName=Final Design Member=Component Connector? Connector
+Added Member To Class: ClassName=Final Design Member=Component Connector? Connector
