@@ -1,0 +1,100 @@
+Removed Pin From Net: NetName=+12 Pin=1.1-2
+Removed Pin From Net: NetName=+12 Pin=1.2-2
+Removed Pin From Net: NetName=+12 Pin=2.1-2
+Removed Pin From Net: NetName=+12 Pin=2.2-1
+Removed Pin From Net: NetName=+12 Pin=3.1-2
+Removed Pin From Net: NetName=+12 Pin=3.2-2
+Removed Pin From Net: NetName=+12 Pin=4.1-2
+Removed Pin From Net: NetName=+12 Pin=4.2-1
+Removed Pin From Net: NetName=+12 Pin=5.1-2
+Removed Pin From Net: NetName=+12 Pin=5.2-2
+Removed Pin From Net: NetName=+12 Pin=6.1-2
+Removed Pin From Net: NetName=+12 Pin=6.2-2
+Removed Pin From Net: NetName=+12 Pin=7.1-2
+Removed Pin From Net: NetName=+12 Pin=7.2-2
+Removed Pin From Net: NetName=+12 Pin=8.1-2
+Removed Pin From Net: NetName=+12 Pin=8.2-2
+Removed Pin From Net: NetName=+12 Pin=9.1-2
+Removed Pin From Net: NetName=+12 Pin=9.2-2
+Removed Pin From Net: NetName=+12 Pin=10.1-2
+Removed Pin From Net: NetName=+12 Pin=10.2-2
+Removed Pin From Net: NetName=+12 Pin=11.1-2
+Removed Pin From Net: NetName=+12 Pin=11.2-2
+Removed Pin From Net: NetName=+12 Pin=12.1-2
+Removed Pin From Net: NetName=+12 Pin=12.2-2
+Removed Pin From Net: NetName=+12 Pin=13.1-1
+Removed Pin From Net: NetName=+12 Pin=13.2-1
+Removed Pin From Net: NetName=+12 Pin=14.1-1
+Removed Pin From Net: NetName=+12 Pin=14.2-1
+Removed Pin From Net: NetName=+12 Pin=15.1-1
+Removed Pin From Net: NetName=+12 Pin=15.2-1
+Removed Pin From Net: NetName=+12 Pin=16.1-1
+Removed Pin From Net: NetName=+12 Pin=16.2-1
+Removed Pin From Net: NetName=+12 Pin=17+-2
+Removed Pin From Net: NetName=+12 Pin=17--1
+Removed Pin From Net: NetName=+12 Pin=18.1-1
+Removed Pin From Net: NetName=+12 Pin=18.2-1
+Removed Pin From Net: NetName=+12 Pin=19.1-1
+Removed Pin From Net: NetName=+12 Pin=19.2-1
+Removed Pin From Net: NetName=+12 Pin=20.1-1
+Removed Pin From Net: NetName=+12 Pin=20.2-1
+Removed Pin From Net: NetName=+12 Pin=21.1-1
+Removed Pin From Net: NetName=+12 Pin=21.2-1
+Removed Pin From Net: NetName=+12 Pin=22.1-1
+Removed Pin From Net: NetName=+12 Pin=22.2-1
+Removed Pin From Net: NetName=+12 Pin=23.1-1
+Removed Pin From Net: NetName=+12 Pin=23.2-1
+Removed Pin From Net: NetName=+12 Pin=24.1-2
+Removed Pin From Net: NetName=+12 Pin=24.2-1
+Added Component: Designator=0.01uf_1(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=0.1uf_1(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=0.01uf_2(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=0.1uf_2(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=0.01uf_3(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=0.1uf_3(Chip2PinSM127P600-8N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=JTAG(JTAG - duplicate)
+Add component. Clean all parameters for all variants
+Added Component: Designator=UART(UART)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=*-3
+Added Pin To Net: NetName=GND Pin=*-12
+Added Pin To Net: NetName=GND Pin=*-27
+Added Pin To Net: NetName=GND Pin=*-32
+Added Pin To Net: NetName=GND Pin=*-39
+Added Pin To Net: NetName=GND Pin=*-55
+Added Pin To Net: NetName=GND Pin=JTAG-GND
+Added Pin To Net: NetName=GND Pin=UART-GND
+Added Pin To Net: NetName=3.3V Pin=*-2
+Added Pin To Net: NetName=3.3V Pin=*-11
+Added Pin To Net: NetName=3.3V Pin=*-25
+Added Pin To Net: NetName=3.3V Pin=*-26
+Added Pin To Net: NetName=3.3V Pin=*-42
+Added Pin To Net: NetName=3.3V Pin=*-56
+Added Pin To Net: NetName=3.3V Pin=JTAG-3.3V
+Added Net: Name=3.3V
+Added Pin To Net: NetName=Rx Pin=*-16
+Added Pin To Net: NetName=Rx Pin=UART-Tx
+Added Net: Name=Rx
+Added Pin To Net: NetName=SWC Pin=*-52
+Added Pin To Net: NetName=SWC Pin=JTAG-SWC
+Added Net: Name=SWC
+Added Pin To Net: NetName=SWD Pin=*-51
+Added Pin To Net: NetName=SWD Pin=JTAG-SWD
+Added Net: Name=SWD
+Added Pin To Net: NetName=Tx Pin=*-15
+Added Pin To Net: NetName=Tx Pin=UART-Rx
+Added Net: Name=Tx
+Added Member To Class: ClassName=Final Design Member=Component 0.01uf_1 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uf_1 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.01uf_2 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uf_2 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.01uf_3 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uf_3 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component JTAG
+Added Member To Class: ClassName=Final Design Member=Component UART

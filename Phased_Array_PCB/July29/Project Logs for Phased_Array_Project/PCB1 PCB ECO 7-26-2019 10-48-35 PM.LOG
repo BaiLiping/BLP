@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=5+ Pin=Connector3-1
+Removed Pin From Net: NetName=6+ Pin=Connector3-2
+Removed Pin From Net: NetName=10+ Pin=Connector3-3
+Removed Pin From Net: NetName=9+ Pin=Connector3-4
+Removed Pin From Net: NetName=9- Pin=Connector3-5
+Removed Pin From Net: NetName=10- Pin=Connector3-6
+Removed Pin From Net: NetName=6- Pin=Connector3-7
+Removed Pin From Net: NetName=5- Pin=Connector3-8
+Added Pin To Net: NetName=6+ Pin=Connector3-1
+Added Pin To Net: NetName=5+ Pin=Connector3-2
+Added Pin To Net: NetName=9+ Pin=Connector3-3
+Added Pin To Net: NetName=10+ Pin=Connector3-4
+Added Pin To Net: NetName=10- Pin=Connector3-5
+Added Pin To Net: NetName=9- Pin=Connector3-6
+Added Pin To Net: NetName=5- Pin=Connector3-7
+Added Pin To Net: NetName=6- Pin=Connector3-8

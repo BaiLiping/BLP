@@ -1,0 +1,19 @@
+Removed Pin From Net: NetName=3.3V Pin=0.01uf-1
+Removed Pin From Net: NetName=3.3V Pin=0.1uf-1
+Removed Pin From Net: NetName=3.3V Pin=0.01uf_1-2
+Removed Pin From Net: NetName=3.3V Pin=0.1uf_1-2
+Removed Pin From Net: NetName=3.3V Pin=0.01uf_3-2
+Removed Pin From Net: NetName=3.3V Pin=0.1uf_3-2
+Removed Pin From Net: NetName=GND Pin=10pf_1-1
+Removed Pin From Net: NetName=OSC0 Pin=10pf_1-2
+Removed Pin From Net: NetName=GND Pin=10pf_2-1
+Removed Pin From Net: NetName=OSC1 Pin=10pf_2-2
+Removed Pin From Net: NetName=+12 Pin=19.1-1
+Removed Pin From Net: NetName=+12 Pin=20.1-1
+Removed Pin From Net: NetName=+12 Pin=21.2-1
+Removed Pin From Net: NetName=OSC1 Pin=Xtal-1
+Removed Pin From Net: NetName=OSC0 Pin=Xtal-2
+Change Component Footprint: Designator=3.3VPower Old Footprint=12VPower New Footprint=DIP10
+Change Component Footprint: Designator=12VPower Old Footprint=12VPower New Footprint=DIP10
+Change Component Designator: OldDesignator=0.01uf NewDesignator=0.01uf_2
+Change Component Designator: OldDesignator=0.1uf NewDesignator=0.1uf_2

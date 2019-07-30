@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=5V Pin=1uf-2
+Removed Pin From Net: NetName=3.3V Pin=330R-1
+Removed Pin From Net: NetName=5V Pin=TPS73633-1
+Removed Pin From Net: NetName=GND Pin=TPS73633-2
+Removed Pin From Net: NetName=5V Pin=TPS73633-3
+Removed Pin From Net: NetName=3.3V Pin=TPS73633-6
+Added Component: Designator=1.5K(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LED2(0805)
+Add component. Clean all parameters for all variants
+Added Net: Name=1.5KR
+Added Net: Name=330R
+Added Member To Class: ClassName=Final Design Member=Component 1.5K Resistor
+Added Member To Class: ClassName=Final Design Member=Component LED2 LED

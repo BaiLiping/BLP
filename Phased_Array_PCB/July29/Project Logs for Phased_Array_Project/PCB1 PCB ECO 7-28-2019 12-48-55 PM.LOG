@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=23+ Pin=3.3VPower-3
+Removed Pin From Net: NetName=3.3V Pin=3.3VPower-3
+Removed Pin From Net: NetName=GND Pin=12VPower-3
+Removed Pin From Net: NetName=+12 Pin=12VPower-3
+Change Component Designator: OldDesignator=3.3VPower NewDesignator=5VPower
+Added Component: Designator=0.01uf(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=1uf(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TPS73633(3.3v)
+Add component. Clean all parameters for all variants
+Added Net: Name=5V
+Added Net: Name=NR
+Added Member To Class: ClassName=Final Design Member=Component 0.01uf Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 1uf Capacitor
+Added Member To Class: ClassName=Final Design Member=Component TPS73633

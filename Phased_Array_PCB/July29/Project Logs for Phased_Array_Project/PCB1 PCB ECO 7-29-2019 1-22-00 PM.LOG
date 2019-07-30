@@ -1,0 +1,37 @@
+Removed Pin From Net: NetName=OSC1 Pin=10pf_1-1
+Removed Pin From Net: NetName=OSC0 Pin=10pf_2-1
+Removed Pin From Net: NetName=OSC0 Pin=Xtal-1
+Removed Pin From Net: NetName=OSC1 Pin=Xtal-2
+Added Component: Designator=10k(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=ExClock(3pin)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Reset(Reset)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Switch(Lock)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=3.3V Pin=10k-2
+Added Pin To Net: NetName=GND Pin=ExClock-2
+Added Pin To Net: NetName=GND Pin=Reset-2
+Added Pin To Net: NetName=OSC0 Pin=Switch-2
+Added Pin To Net: NetName=OSC1 Pin=Switch-5
+Added Pin To Net: NetName=Exclock Pin=ExClock-1
+Added Pin To Net: NetName=Exclock Pin=Switch-1
+Added Net: Name=Exclock
+Added Pin To Net: NetName=Reset Pin=*-38
+Added Pin To Net: NetName=Reset Pin=10k-1
+Added Pin To Net: NetName=Reset Pin=Reset-1
+Added Net: Name=Reset
+Added Pin To Net: NetName=Xtal0 Pin=10pf_2-1
+Added Pin To Net: NetName=Xtal0 Pin=ExClock-3
+Added Pin To Net: NetName=Xtal0 Pin=Switch-3
+Added Pin To Net: NetName=Xtal0 Pin=Xtal-1
+Added Net: Name=Xtal0
+Added Pin To Net: NetName=Xtal1 Pin=10pf_1-1
+Added Pin To Net: NetName=Xtal1 Pin=Switch-6
+Added Pin To Net: NetName=Xtal1 Pin=Xtal-2
+Added Net: Name=Xtal1
+Added Member To Class: ClassName=Final Design Member=Component 10k Resistor
+Added Member To Class: ClassName=Final Design Member=Component ExClock 3pin
+Added Member To Class: ClassName=Final Design Member=Component Reset
+Added Member To Class: ClassName=Final Design Member=Component Switch LockBottom
