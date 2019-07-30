@@ -1,0 +1,230 @@
+Added Component: Designator=*(TM4C123)
+Add component. Clean all parameters for all variants
+Added Component: Designator=0.1uF_1(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=0.1uF_2(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=0.1uF_3(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=0.1uF_4(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=0.1uF_5(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=0.1uF_6(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=0.1uF_8(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=0.1uF_9(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=0.1uF_10(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=0.1uF_11(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=0.1uf_12(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=4.7uF_1(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=4.7uF_2(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=4.7uF_3(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=4.7uF_4(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=4.7uF_5(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=4.7uF_6(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=4.7uF_7(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=4.7uF_8(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=4.7uF_9(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=4.7uF_10(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=4.7uF_11(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=4.7uF_12(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Capacitor(CAPC3225X06N)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Connector1(Connector)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Connector2(Connector)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Connector3(Connector)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TC4428_1(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TC4428_2(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TC4428_3(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TC4428_4(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TC4428_5(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TC4428_6(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TC4428_7(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TC4428_8(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TC4428_9(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TC4428_10(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TC4428_11(TC4428)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TC4428_12(TC4428)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=7 Pin=*-1
+Added Pin To Net: NetName=8 Pin=*-4
+Added Pin To Net: NetName=1 Pin=*-45
+Added Pin To Net: NetName=2 Pin=*-46
+Added Pin To Net: NetName=3 Pin=*-47
+Added Pin To Net: NetName=4 Pin=*-48
+Added Pin To Net: NetName=6 Pin=*-57
+Added Pin To Net: NetName=5 Pin=*-58
+Added Pin To Net: NetName=9 Pin=*-61
+Added Pin To Net: NetName=10 Pin=*-62
+Added Pin To Net: NetName=11 Pin=*-63
+Added Pin To Net: NetName=12 Pin=*-64
+Added Pin To Net: NetName=1+ Pin=Connector1-1
+Added Pin To Net: NetName=2+ Pin=Connector1-2
+Added Pin To Net: NetName=3+ Pin=Connector1-3
+Added Pin To Net: NetName=4+ Pin=Connector1-4
+Added Pin To Net: NetName=1- Pin=Connector1-5
+Added Pin To Net: NetName=2- Pin=Connector1-6
+Added Pin To Net: NetName=3- Pin=Connector1-7
+Added Pin To Net: NetName=4- Pin=Connector1-8
+Added Pin To Net: NetName=5+ Pin=Connector2-1
+Added Pin To Net: NetName=6+ Pin=Connector2-2
+Added Pin To Net: NetName=7+ Pin=Connector2-3
+Added Pin To Net: NetName=8+ Pin=Connector2-4
+Added Pin To Net: NetName=5- Pin=Connector2-5
+Added Pin To Net: NetName=6- Pin=Connector2-6
+Added Pin To Net: NetName=7- Pin=Connector2-7
+Added Pin To Net: NetName=8- Pin=Connector2-8
+Added Pin To Net: NetName=9+ Pin=Connector3-1
+Added Pin To Net: NetName=10+ Pin=Connector3-2
+Added Pin To Net: NetName=11+ Pin=Connector3-3
+Added Pin To Net: NetName=12+ Pin=Connector3-4
+Added Pin To Net: NetName=9- Pin=Connector3-5
+Added Pin To Net: NetName=10- Pin=Connector3-6
+Added Pin To Net: NetName=11- Pin=Connector3-7
+Added Pin To Net: NetName=12- Pin=Connector3-8
+Added Pin To Net: NetName=1 Pin=TC4428_1-2
+Added Pin To Net: NetName=GND Pin=TC4428_1-3
+Added Pin To Net: NetName=1 Pin=TC4428_1-4
+Added Pin To Net: NetName=1- Pin=TC4428_1-5
+Added Pin To Net: NetName=VCC Pin=TC4428_1-6
+Added Pin To Net: NetName=1+ Pin=TC4428_1-7
+Added Pin To Net: NetName=2 Pin=TC4428_2-2
+Added Pin To Net: NetName=GND Pin=TC4428_2-3
+Added Pin To Net: NetName=2 Pin=TC4428_2-4
+Added Pin To Net: NetName=2- Pin=TC4428_2-5
+Added Pin To Net: NetName=VCC Pin=TC4428_2-6
+Added Pin To Net: NetName=2+ Pin=TC4428_2-7
+Added Pin To Net: NetName=3 Pin=TC4428_3-2
+Added Pin To Net: NetName=GND Pin=TC4428_3-3
+Added Pin To Net: NetName=3 Pin=TC4428_3-4
+Added Pin To Net: NetName=3- Pin=TC4428_3-5
+Added Pin To Net: NetName=VCC Pin=TC4428_3-6
+Added Pin To Net: NetName=3+ Pin=TC4428_3-7
+Added Pin To Net: NetName=4 Pin=TC4428_4-2
+Added Pin To Net: NetName=GND Pin=TC4428_4-3
+Added Pin To Net: NetName=4 Pin=TC4428_4-4
+Added Pin To Net: NetName=4- Pin=TC4428_4-5
+Added Pin To Net: NetName=VCC Pin=TC4428_4-6
+Added Pin To Net: NetName=4+ Pin=TC4428_4-7
+Added Pin To Net: NetName=5 Pin=TC4428_5-2
+Added Pin To Net: NetName=GND Pin=TC4428_5-3
+Added Pin To Net: NetName=5 Pin=TC4428_5-4
+Added Pin To Net: NetName=5- Pin=TC4428_5-5
+Added Pin To Net: NetName=VCC Pin=TC4428_5-6
+Added Pin To Net: NetName=5+ Pin=TC4428_5-7
+Added Pin To Net: NetName=6 Pin=TC4428_6-2
+Added Pin To Net: NetName=GND Pin=TC4428_6-3
+Added Pin To Net: NetName=6 Pin=TC4428_6-4
+Added Pin To Net: NetName=6- Pin=TC4428_6-5
+Added Pin To Net: NetName=VCC Pin=TC4428_6-6
+Added Pin To Net: NetName=6+ Pin=TC4428_6-7
+Added Pin To Net: NetName=7 Pin=TC4428_7-2
+Added Pin To Net: NetName=GND Pin=TC4428_7-3
+Added Pin To Net: NetName=7 Pin=TC4428_7-4
+Added Pin To Net: NetName=7- Pin=TC4428_7-5
+Added Pin To Net: NetName=VCC Pin=TC4428_7-6
+Added Pin To Net: NetName=7+ Pin=TC4428_7-7
+Added Pin To Net: NetName=8 Pin=TC4428_8-2
+Added Pin To Net: NetName=GND Pin=TC4428_8-3
+Added Pin To Net: NetName=8 Pin=TC4428_8-4
+Added Pin To Net: NetName=8- Pin=TC4428_8-5
+Added Pin To Net: NetName=VCC Pin=TC4428_8-6
+Added Pin To Net: NetName=8+ Pin=TC4428_8-7
+Added Pin To Net: NetName=9 Pin=TC4428_9-2
+Added Pin To Net: NetName=GND Pin=TC4428_9-3
+Added Pin To Net: NetName=9 Pin=TC4428_9-4
+Added Pin To Net: NetName=9- Pin=TC4428_9-5
+Added Pin To Net: NetName=VCC Pin=TC4428_9-6
+Added Pin To Net: NetName=9+ Pin=TC4428_9-7
+Added Pin To Net: NetName=10 Pin=TC4428_10-2
+Added Pin To Net: NetName=GND Pin=TC4428_10-3
+Added Pin To Net: NetName=10 Pin=TC4428_10-4
+Added Pin To Net: NetName=10- Pin=TC4428_10-5
+Added Pin To Net: NetName=VCC Pin=TC4428_10-6
+Added Pin To Net: NetName=10+ Pin=TC4428_10-7
+Added Pin To Net: NetName=11 Pin=TC4428_11-2
+Added Pin To Net: NetName=GND Pin=TC4428_11-3
+Added Pin To Net: NetName=11 Pin=TC4428_11-4
+Added Pin To Net: NetName=11- Pin=TC4428_11-5
+Added Pin To Net: NetName=11+ Pin=TC4428_11-7
+Added Pin To Net: NetName=12 Pin=TC4428_12-2
+Added Pin To Net: NetName=GND Pin=TC4428_12-3
+Added Pin To Net: NetName=12 Pin=TC4428_12-4
+Added Pin To Net: NetName=12- Pin=TC4428_12-5
+Added Pin To Net: NetName=12+ Pin=TC4428_12-7
+Added Pin To Net: NetName=Net0.1uf_12_pin+ Pin=TC4428_11-6
+Added Net: Name=Net0.1uf_12_pin+
+Added Pin To Net: NetName=Net4.7uF_12_pin+ Pin=TC4428_12-6
+Added Net: Name=Net4.7uF_12_pin+
+Added Member To Class: ClassName=Final Design Member=Component * TM4C123GH6PM
+Added Member To Class: ClassName=Final Design Member=Component 0.1uF_1 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uF_2 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uF_3 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uF_4 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uF_5 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uF_6 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uF_8 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uF_9 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uF_10 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uF_11 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uf_12 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 4.7uF_1 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 4.7uF_2 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 4.7uF_3 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 4.7uF_4 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 4.7uF_5 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 4.7uF_6 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 4.7uF_7 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 4.7uF_8 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 4.7uF_9 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 4.7uF_10 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 4.7uF_11 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 4.7uF_12 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component Capacitor
+Added Member To Class: ClassName=Final Design Member=Component Connector1 Connector
+Added Member To Class: ClassName=Final Design Member=Component Connector2 Connector
+Added Member To Class: ClassName=Final Design Member=Component Connector3 Connector
+Added Member To Class: ClassName=Final Design Member=Component TC4428_1 TC4428
+Added Member To Class: ClassName=Final Design Member=Component TC4428_2 TC4428
+Added Member To Class: ClassName=Final Design Member=Component TC4428_3 TC4428
+Added Member To Class: ClassName=Final Design Member=Component TC4428_4 TC4428
+Added Member To Class: ClassName=Final Design Member=Component TC4428_5 TC4428
+Added Member To Class: ClassName=Final Design Member=Component TC4428_6 TC4428
+Added Member To Class: ClassName=Final Design Member=Component TC4428_7 TC4428
+Added Member To Class: ClassName=Final Design Member=Component TC4428_8 TC4428
+Added Member To Class: ClassName=Final Design Member=Component TC4428_9 TC4428
+Added Member To Class: ClassName=Final Design Member=Component TC4428_10 TC4428
+Added Member To Class: ClassName=Final Design Member=Component TC4428_11 TC4428
+Added Member To Class: ClassName=Final Design Member=Component TC4428_12 TC4428
