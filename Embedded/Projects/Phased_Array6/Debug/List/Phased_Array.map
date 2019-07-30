@@ -1,0 +1,231 @@
+###############################################################################
+#
+# IAR ELF Linker V8.32.2.178/W32 for ARM                  28/Jul/2019  05:33:13
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        F:\BLP\Embedded\Projects\Phased_Array6\Debug\Exe\Phased_Array.out
+#    Map file     =  
+#        F:\BLP\Embedded\Projects\Phased_Array6\Debug\List\Phased_Array.map
+#    Command line =  
+#        -f C:\Users\ADMINI~1\AppData\Local\Temp\EW6709.tmp
+#        (F:\BLP\Embedded\Projects\Phased_Array6\Debug\Obj\Board.o
+#        F:\BLP\Embedded\Projects\Phased_Array6\Debug\Obj\main.o
+#        F:\BLP\Embedded\Projects\Phased_Array6\Debug\Obj\Phase.o
+#        F:\BLP\Embedded\Projects\Phased_Array6\Debug\Obj\UART.o
+#        F:\BLP\Embedded\Projects\Phased_Array6\Debug\Obj\VTable.o
+#        --no_out_extension -o
+#        F:\BLP\Embedded\Projects\Phased_Array6\Debug\Exe\Phased_Array.out
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --map
+#        F:\BLP\Embedded\Projects\Phased_Array6\Debug\List\Phased_Array.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.2_2\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__Heap_Handler  = NoFree
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The no free heap was selected because no calls to memory
+deallocation functions were found in the application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x3'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block HEAP with size = 1K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
+          rw, block CSTACK, block HEAP };
+
+  Section          Kind         Address   Size  Object
+  -------          ----         -------   ----  ------
+"A0":                                    0x26c
+  .intvec          const            0x0  0x26c  VTable.o [1]
+                                - 0x26c  0x26c
+
+"P1":                                    0x3cc
+  .text            ro code        0x26c  0x104  Phase.o [1]
+  .text            ro code        0x370   0x48  no_free_heap0.o [2]
+  .text            ro code        0x3b8   0x2c  xgetmemchunk.o [2]
+  .text            ro code        0x3e4   0x68  Board.o [1]
+  .text            ro code        0x44c   0x5c  UART.o [1]
+  .text            ro code        0x4a8   0x54  VTable.o [1]
+  .text            ro code        0x4fc   0x3a  zero_init3.o [3]
+  .text            ro code        0x538   0x30  main.o [1]
+  .text            ro code        0x568   0x28  data_init.o [3]
+  .iar.init_table  const          0x590   0x10  - Linker created -
+  .text            ro code        0x5a0   0x1e  cmain.o [3]
+  .text            ro code        0x5be    0x4  low_level_init.o [2]
+  .text            ro code        0x5c2    0x4  exit.o [2]
+  .text            ro code        0x5c8    0xa  cexit.o [3]
+  .text            ro code        0x5d4   0x14  exit.o [4]
+  .rodata          const          0x5e8    0xc  VTable.o [1]
+  .rodata          const          0x5f4    0xc  VTable.o [1]
+  .rodata          const          0x600    0xc  VTable.o [1]
+  .rodata          const          0x60c    0xc  VTable.o [1]
+  .text            ro code        0x618    0xc  cstartup_M.o [3]
+  .rodata          const          0x624    0x8  VTable.o [1]
+  .rodata          const          0x62c    0x4  main.o [1]
+  .rodata          const          0x630    0x4  main.o [1]
+  .rodata          const          0x634    0x4  VTable.o [1]
+  .rodata          const          0x638    0x0  zero_init3.o [3]
+                                - 0x638  0x3cc
+
+"P2", part 1 of 2:                        0x58
+  .bss             zero     0x2000'0000   0x28  main.o [1]
+  .bss             zero     0x2000'0028   0x28  main.o [1]
+  .bss             zero     0x2000'0050    0x4  no_free_heap0.o [2]
+  .bss             zero     0x2000'0054    0x4  xgetmemchunk.o [2]
+                          - 0x2000'0058   0x58
+
+"P2", part 2 of 2:                       0x800
+  CSTACK                    0x2000'0058  0x400  <Block>
+    CSTACK         uninit   0x2000'0058  0x400  <Block tail>
+  HEAP                      0x2000'0458  0x400  <Block>
+    HEAP           uninit   0x2000'0458  0x400  <Block tail>
+                          - 0x2000'0858  0x800
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x638     0x3'ffff  0x3'f9c8
+  0x2000'0858  0x2000'7fff    0x77a8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x58:
+          0x2000'0000  0x58
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+command line/config:
+    -------------------------------------------
+    Total:
+
+F:\BLP\Embedded\Projects\Phased_Array6\Debug\Obj: [1]
+    Board.o               104
+    Phase.o               260
+    UART.o                 92
+    VTable.o               84      680
+    main.o                 48        8       80
+    -------------------------------------------
+    Total:                588      688       80
+
+dl7M_tln.a: [2]
+    exit.o                  4
+    low_level_init.o        4
+    no_free_heap0.o        72                 4
+    xgetmemchunk.o         44                 4
+    -------------------------------------------
+    Total:                124                 8
+
+rt7M_tl.a: [3]
+    cexit.o                10
+    cmain.o                30
+    cstartup_M.o           12
+    data_init.o            40
+    zero_init3.o           58
+    -------------------------------------------
+    Total:                150
+
+shb_l.a: [4]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    6
+    Linker created                  16    2 048
+-----------------------------------------------
+    Grand Total:          888      704    2 136
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base         0x590          --   Gb  - Linker created -
+.iar.init_table$$Limit        0x5a0          --   Gb  - Linker created -
+?main                         0x5a1         Code  Gb  cmain.o [3]
+BusFault_Handler              0x4c7    0xa  Code  Gb  VTable.o [1]
+CSTACK$$Base            0x2000'0058          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0458         Data  Gb  - Linker created -
+HEAP$$Base              0x2000'0458          --   Gb  - Linker created -
+HEAP$$Limit             0x2000'0858          --   Gb  - Linker created -
+HardFault_Handler             0x4a9    0xa  Code  Gb  VTable.o [1]
+Init_Board                    0x3e5   0x4c  Code  Gb  Board.o [1]
+Init_UART1                    0x44d   0x5c  Code  Gb  UART.o [1]
+MemManage_Handler             0x4bd    0xa  Code  Gb  VTable.o [1]
+NMI_Handler                   0x4b3    0xa  Code  Gb  VTable.o [1]
+Phased                        0x26d  0x104  Code  Gb  Phase.o [1]
+Region$$Table$$Base           0x590          --   Gb  - Linker created -
+Region$$Table$$Limit          0x5a0          --   Gb  - Linker created -
+UART4_IRQHandler              0x449    0x2  Code  Gb  Board.o [1]
+Unused_Handler                0x4db    0xa  Code  Gb  VTable.o [1]
+UsageFault_Handler            0x4d1    0xa  Code  Gb  VTable.o [1]
+__cmain                       0x5a1         Code  Gb  cmain.o [3]
+__data_GetMemChunk            0x3b9   0x2c  Code  Gb  xgetmemchunk.o [2]
+__data_GetMemChunk::start
+                        0x2000'0054    0x4  Data  Lc  xgetmemchunk.o [2]
+__exit                        0x5d5   0x14  Code  Gb  exit.o [4]
+__iar_data_init3              0x569   0x28  Code  Gb  data_init.o [3]
+__iar_program_start           0x619         Code  Gb  cstartup_M.o [3]
+__iar_zero_init3              0x4fd   0x3a  Code  Gb  zero_init3.o [3]
+__low_level_init              0x5bf    0x4  Code  Gb  low_level_init.o [2]
+__no_free_malloc              0x371   0x44  Code  Gb  no_free_heap0.o [2]
+__vector_table                  0x0  0x26c  Data  Gb  VTable.o [1]
+_call_main                    0x5ad         Code  Gb  cmain.o [3]
+_exit                         0x5c9         Code  Gb  cexit.o [3]
+_main                         0x5bb         Code  Gb  cmain.o [3]
+assert_failed                 0x44b    0x2  Code  Gb  Board.o [1]
+exit                          0x5c3    0x4  Code  Gb  exit.o [2]
+half_wave                     0x62c    0x4  Data  Gb  main.o [1]
+iterators               0x2000'0028   0x28  Data  Gb  main.o [1]
+main                          0x539   0x30  Code  Gb  main.o [1]
+number_of_transducers         0x630    0x4  Data  Gb  main.o [1]
+phased_array            0x2000'0000   0x28  Data  Gb  main.o [1]
+qs                      0x2000'0050    0x4  Data  Lc  no_free_heap0.o [2]
+
+
+[1] = F:\BLP\Embedded\Projects\Phased_Array6\Debug\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+    888 bytes of readonly  code memory
+    704 bytes of readonly  data memory
+  2 136 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
