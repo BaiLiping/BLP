@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=Xtal1 Pin=10pf_1-1
+Removed Pin From Net: NetName=GND Pin=10pf_1-2
+Removed Pin From Net: NetName=Xtal0 Pin=10pf_2-1
+Removed Pin From Net: NetName=GND Pin=10pf_2-2
+Change Component Footprint: Designator=10pf_1 Old Footprint=10pf New Footprint=0805
+Change Component Footprint: Designator=10pf_2 Old Footprint=10pf New Footprint=0805
+Change Component Comment : Designator=10pf_1 Old Comment=10pf New Comment=Capacitor
+Change Component Comment : Designator=10pf_2 Old Comment=10pf New Comment=Capacitor
+Added Pin To Net: NetName=GND Pin=10pf_1-1
+Added Pin To Net: NetName=Xtal0 Pin=10pf_1-2
+Added Pin To Net: NetName=GND Pin=10pf_2-1
+Added Pin To Net: NetName=Xtal1 Pin=10pf_2-2

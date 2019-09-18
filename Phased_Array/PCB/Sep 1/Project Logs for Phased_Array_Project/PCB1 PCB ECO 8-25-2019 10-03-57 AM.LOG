@@ -1,0 +1,28 @@
+Added Component: Designator=Out3(DIP4)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Out4(DIP4)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Out5(DIP4)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Out6(DIP4)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=9 Pin=Out3-1
+Added Pin To Net: NetName=10 Pin=Out3-2
+Added Pin To Net: NetName=11 Pin=Out3-3
+Added Pin To Net: NetName=12 Pin=Out3-4
+Added Pin To Net: NetName=13 Pin=Out4-1
+Added Pin To Net: NetName=14 Pin=Out4-2
+Added Pin To Net: NetName=15 Pin=Out4-3
+Added Pin To Net: NetName=16 Pin=Out4-4
+Added Pin To Net: NetName=17 Pin=Out5-1
+Added Pin To Net: NetName=18 Pin=Out5-2
+Added Pin To Net: NetName=19 Pin=Out5-3
+Added Pin To Net: NetName=20 Pin=Out5-4
+Added Pin To Net: NetName=21 Pin=Out6-1
+Added Pin To Net: NetName=22 Pin=Out6-2
+Added Pin To Net: NetName=23 Pin=Out6-3
+Added Pin To Net: NetName=24 Pin=Out6-4
+Added Member To Class: ClassName=Final Design Member=Component Out3 4pin
+Added Member To Class: ClassName=Final Design Member=Component Out4 4pin
+Added Member To Class: ClassName=Final Design Member=Component Out5 4pin
+Added Member To Class: ClassName=Final Design Member=Component Out6 4pin

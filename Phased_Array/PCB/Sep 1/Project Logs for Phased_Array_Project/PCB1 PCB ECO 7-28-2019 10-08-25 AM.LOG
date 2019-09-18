@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=GND Pin=0.01uf_1-1
+Removed Pin From Net: NetName=GND Pin=0.1uf_1-1
+Removed Pin From Net: NetName=3.3V Pin=0.01uf_1-2
+Removed Pin From Net: NetName=3.3V Pin=0.1uf_1-2
+Removed Pin From Net: NetName=3.3V Pin=0.01uf_2-1
+Removed Pin From Net: NetName=3.3V Pin=0.1uf_2-1
+Removed Pin From Net: NetName=GND Pin=0.01uf_2-2
+Removed Pin From Net: NetName=GND Pin=0.1uf_2-2
+Removed Pin From Net: NetName=GND Pin=0.01uf_3-1
+Removed Pin From Net: NetName=GND Pin=0.1uf_3-1
+Removed Pin From Net: NetName=3.3V Pin=0.01uf_3-2
+Removed Pin From Net: NetName=3.3V Pin=0.1uf_3-2
+Removed Pin From Net: NetName=GND Pin=3.3VPower-1
+Removed Pin From Net: NetName=3.3V Pin=3.3VPower-2
+Added Component: Designator=10pf_1(10pf)
+Add component. Clean all parameters for all variants
+Added Component: Designator=10pf_2(10pf)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Xtal(Crystal)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=OSC0 Pin=*-40
+Added Net: Name=OSC0
+Added Pin To Net: NetName=OSC1 Pin=*-41
+Added Net: Name=OSC1
+Added Member To Class: ClassName=Final Design Member=Component 10pf_1 10pf
+Added Member To Class: ClassName=Final Design Member=Component 10pf_2 10pf
+Added Member To Class: ClassName=Final Design Member=Component Xtal

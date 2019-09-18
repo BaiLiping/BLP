@@ -1,0 +1,16 @@
+Added Component: Designator=90R(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Fan1(DIP2)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Fan2(DIP2)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=+12 Pin=90R-2
+Added Pin To Net: NetName=GND Pin=Fan1-1
+Added Pin To Net: NetName=GND Pin=Fan2-1
+Added Pin To Net: NetName=Fan Pin=90R-1
+Added Pin To Net: NetName=Fan Pin=Fan1-2
+Added Pin To Net: NetName=Fan Pin=Fan2-2
+Added Net: Name=Fan
+Added Member To Class: ClassName=Final Design Member=Component 90R Resistor
+Added Member To Class: ClassName=Final Design Member=Component Fan1 2pin
+Added Member To Class: ClassName=Final Design Member=Component Fan2 2pin

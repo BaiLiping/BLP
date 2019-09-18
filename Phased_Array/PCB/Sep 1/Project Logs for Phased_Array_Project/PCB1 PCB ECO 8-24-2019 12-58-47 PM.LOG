@@ -1,0 +1,22 @@
+Added Component: Designator=1.5K_L(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=330R_L(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LED_L_12(DIP2)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LED_L(DIP2)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=+12 Pin=1.5K_L-2
+Added Pin To Net: NetName=5V Pin=330R_L-2
+Added Pin To Net: NetName=GND Pin=LED_L-1
+Added Pin To Net: NetName=GND Pin=LED_L_12-1
+Added Pin To Net: NetName=LED_L_12 Pin=1.5K_L-1
+Added Pin To Net: NetName=LED_L_12 Pin=LED_L_12-2
+Added Net: Name=LED_L_12
+Added Pin To Net: NetName=LED_L Pin=330R_L-1
+Added Pin To Net: NetName=LED_L Pin=LED_L-2
+Added Net: Name=LED_L
+Added Member To Class: ClassName=Final Design Member=Component 1.5K_L Resistor_2
+Added Member To Class: ClassName=Final Design Member=Component 330R_L 330R
+Added Member To Class: ClassName=Final Design Member=Component LED_L_12 2pin
+Added Member To Class: ClassName=Final Design Member=Component LED_L 2pin

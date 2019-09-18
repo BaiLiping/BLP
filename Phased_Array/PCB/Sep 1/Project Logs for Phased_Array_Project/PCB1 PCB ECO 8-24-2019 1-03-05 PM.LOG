@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=+12 Pin=1.5K-2
+Removed Pin From Net: NetName=3.3V Pin=330R-1
+Removed Pin From Net: NetName=GND Pin=LED2-2
+Removed Pin From Net: NetName=GND Pin=LED-2
+Removed Member From Class: ClassName=Final Design Member=1.5K
+Removed Member From Class: ClassName=Final Design Member=330R
+Removed Member From Class: ClassName=Final Design Member=LED2
+Removed Member From Class: ClassName=Final Design Member=LED

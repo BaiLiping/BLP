@@ -1,0 +1,22 @@
+Added Component: Designator=UART_C(3pin)
+Add component. Clean all parameters for all variants
+Added Component: Designator=UART_O(3pin)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=UART_C-3
+Added Pin To Net: NetName=GND Pin=UART_O-3
+Added Pin To Net: NetName=Rx_B Pin=*-16
+Added Pin To Net: NetName=Rx_B Pin=UART-Tx
+Added Net: Name=Rx_B
+Added Pin To Net: NetName=Rx_C Pin=UART_C-1
+Added Net: Name=Rx_C
+Added Pin To Net: NetName=Rx_O Pin=UART_O-1
+Added Net: Name=Rx_O
+Added Pin To Net: NetName=Tx_B Pin=*-15
+Added Pin To Net: NetName=Tx_B Pin=UART-Rx
+Added Net: Name=Tx_B
+Added Pin To Net: NetName=Tx_C Pin=UART_C-2
+Added Net: Name=Tx_C
+Added Pin To Net: NetName=Tx_O Pin=UART_O-2
+Added Net: Name=Tx_O
+Added Member To Class: ClassName=Final Design Member=Component UART_C 3pin
+Added Member To Class: ClassName=Final Design Member=Component UART_O 3pin

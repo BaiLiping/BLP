@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=OSC1 Pin=10pf_1-1
+Added Pin To Net: NetName=GND Pin=10pf_1-2
+Added Pin To Net: NetName=OSC0 Pin=10pf_2-1
+Added Pin To Net: NetName=GND Pin=10pf_2-2

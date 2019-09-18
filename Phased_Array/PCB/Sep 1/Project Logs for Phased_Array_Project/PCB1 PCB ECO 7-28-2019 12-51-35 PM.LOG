@@ -1,0 +1,7 @@
+Added Component: Designator=330R(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LED(0805)
+Add component. Clean all parameters for all variants
+Added Net: Name=Net330R
+Added Member To Class: ClassName=Final Design Member=Component 330R Resistor
+Added Member To Class: ClassName=Final Design Member=Component LED

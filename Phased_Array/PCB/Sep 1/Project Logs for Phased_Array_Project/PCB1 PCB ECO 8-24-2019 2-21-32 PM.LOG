@@ -1,0 +1,9 @@
+Added Component: Designator=Switch_L(DIP6)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=Rx_B Pin=Switch_L-1
+Added Pin To Net: NetName=Rx_C Pin=Switch_L-2
+Added Pin To Net: NetName=Rx_O Pin=Switch_L-3
+Added Pin To Net: NetName=Tx_O Pin=Switch_L-4
+Added Pin To Net: NetName=Tx_C Pin=Switch_L-5
+Added Pin To Net: NetName=Tx_B Pin=Switch_L-6
+Added Member To Class: ClassName=Final Design Member=Component Switch_L

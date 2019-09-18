@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=3.3V Pin=0.01uf-1
+Removed Pin From Net: NetName=3.3V Pin=0.1uf-1
+Added Member To Class: ClassName=Final Design Member=Component 0.01uf Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.01uf Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.01uf Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uf Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uf Capacitor

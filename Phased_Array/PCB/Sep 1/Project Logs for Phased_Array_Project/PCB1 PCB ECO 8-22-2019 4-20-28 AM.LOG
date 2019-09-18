@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=3.3V Pin=0.01uf-1
+Removed Pin From Net: NetName=3.3V Pin=0.01uf-1
+Removed Pin From Net: NetName=3.3V Pin=0.1uf-1
+Removed Pin From Net: NetName=3.3V Pin=0.1uf-1
+Change Component Designator: OldDesignator=0.01uf NewDesignator=0.01uf_1
+Change Component Designator: OldDesignator=0.1uf NewDesignator=0.1uf_1
+Change Component Designator: OldDesignator=0.01uf NewDesignator=0.01uf_2
+Change Component Designator: OldDesignator=0.1uf NewDesignator=0.1uf_2
+Change Component Designator: OldDesignator=0.01uf NewDesignator=0.01uf_3
+Change Component Designator: OldDesignator=0.1uf NewDesignator=0.1uf_3
+Added Member To Class: ClassName=Final Design Member=Component 0.01uf_1 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.01uf_2 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uf_2 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.01uf_3 Capacitor
+Added Member To Class: ClassName=Final Design Member=Component 0.1uf_3 Capacitor
+Added Room: Name=Final Design

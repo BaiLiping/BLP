@@ -1,0 +1,13 @@
+Change Physical Footprint: Designator=10pf_1 Old Footprint=10pf New Footprint=10pf
+Change Physical Footprint: Designator=10pf_2 Old Footprint=10pf New Footprint=10pf
+Change Physical Footprint: Designator=Connector1 Old Footprint=Connector New Footprint=Connector
+Change Physical Footprint: Designator=Connector2 Old Footprint=Connector New Footprint=Connector
+Change Physical Footprint: Designator=Connector3 Old Footprint=Connector New Footprint=Connector
+Change Physical Footprint: Designator=Connector4 Old Footprint=Connector New Footprint=Connector
+Change Physical Footprint: Designator=Connector5 Old Footprint=Connector New Footprint=Connector
+Change Physical Footprint: Designator=Connector6 Old Footprint=Connector New Footprint=Connector
+Change Physical Footprint: Designator=ExClock Old Footprint=3pin New Footprint=3pin
+Change Physical Footprint: Designator=JTAG Old Footprint=JTAG - duplicate New Footprint=JTAG - duplicate
+Change Physical Footprint: Designator=Switch Old Footprint=Lock New Footprint=Lock
+Change Physical Footprint: Designator=UART Old Footprint=UART New Footprint=UART
+Change Physical Footprint: Designator=Xtal Old Footprint=Crystal New Footprint=Crystal

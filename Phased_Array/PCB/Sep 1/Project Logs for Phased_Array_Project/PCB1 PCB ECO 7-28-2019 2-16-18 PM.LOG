@@ -1,0 +1,3 @@
+Change Component Designator: OldDesignator=0.01uf NewDesignator=0.01uf_2
+Change Component Designator: OldDesignator=0.1uf NewDesignator=0.1uf_2
+Added Member To Class: ClassName=Final Design Member=Component 0.01uf_2 Capacitor

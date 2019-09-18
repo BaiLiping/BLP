@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=3.3V Pin=TPS73633-6
+Added Component: Designator=Power_Test(3pin)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=3.3V Pin=Power_Test-2
+Added Pin To Net: NetName=GND Pin=Power_Test-3
+Added Pin To Net: NetName=Power_Test Pin=Power_Test-1
+Added Pin To Net: NetName=Power_Test Pin=TPS73633-6
+Added Net: Name=Power_Test
+Added Member To Class: ClassName=Final Design Member=Component Power_Test 3pin
