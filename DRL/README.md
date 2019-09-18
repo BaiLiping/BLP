@@ -4,7 +4,7 @@ Resources for DRL:
 2. DeepMind David Silver
 3. Berkeley Stat157
 4. University of Waterloo CS885
-5. CMU 10703
+5. [CMU 10-703](https://github.com/BaiLiping/BLP/tree/master/DRL/CMU10703)
 6. Berkeley RL Bootcamp2017
 7. [OpenAI Baseline Implementation of Algs](https://github.com/openai/baselines)
 8. [MorvanZhou Implementation of Algs](https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow)
