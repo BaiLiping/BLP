@@ -6,22 +6,21 @@ np.random.seed(2)
 tf.set_random_seed(2)  # reproducible
 
 # Superparameters
-MAX_EPISODE = 100000
+MAX_EPISODE = 10000
 MAX_EP_STEPS = 10   # maximum time step in one episode
 GAMMA = 0.9     # reward discount in TD error
-LR_A = 1    # learning rate for actor
-LR_C = 1     # learning rate for critic
+LR_A = .5    # learning rate for actor
+LR_C = .5    # learning rate for critic
 
 env = PhasedArrayEnv()
 
-N_F = 48
+N_F = 4
 N_A = env.get_nA()
 
 
 class Actor(object):
-    def __init__(self, sess, n_features, n_actions, lr=1):
+    def __init__(self, sess, n_features, n_actions, lr=LR_A):
         self.sess = sess
-
         self.s = tf.placeholder(tf.float32, [1, n_features], "state")
         self.a = tf.placeholder(tf.int32, None, "act")
         self.td_error = tf.placeholder(tf.float32, None, "td_error")  # TD_error
@@ -29,23 +28,14 @@ class Actor(object):
         with tf.variable_scope('Actor'):
             l1 = tf.layers.dense(
                 inputs=self.s,
-                units=n_actions,    # number of hidden units
+                units=10,    # number of hidden units
                 activation=tf.nn.relu,
                 kernel_initializer=tf.random_normal_initializer(0., .2),    # weights
                 bias_initializer=tf.constant_initializer(0.1),  # biases
                 name='l1'
             )
-
-            l2=tf.layers.dense(
-                    inputs=l1,
-                    units=n_actions,
-                    activation=tf.nn.relu,
-                    kernel_initializer=tf.random_normal_initializer(0.,.2),
-                    name='l2'
-                    )
-
             self.acts_prob = tf.layers.dense(
-                inputs=l2,
+                inputs=l1,
                 units=n_actions,    # output units
                 activation=tf.nn.softmax,   # get action probabilities
                 kernel_initializer=tf.random_normal_initializer(1/n_actions, .01),  # weights
@@ -70,7 +60,7 @@ class Actor(object):
     def choose_action(self, s):
         s = s[np.newaxis, :]
         probs = self.sess.run(self.acts_prob, {self.s: s})   # get probabilities for all actions
-        #print(probs)
+        print(probs)
         return np.random.choice(np.arange(probs.shape[1]), p=probs[0])
     def get_probs(self,s):
         s=s[np.newaxis,:]
@@ -90,7 +80,7 @@ class Critic(object):
         with tf.variable_scope('Critic'):
             l1 = tf.layers.dense(
                 inputs=self.s,
-                units=64,  # number of hidden units
+                units=10,  # number of hidden units
                 activation=tf.nn.relu,  # None
                 # have to be linear to make sure the convergence of actor.
                 # But linear approximator seems hardly learns the correct Q.
@@ -98,16 +88,8 @@ class Critic(object):
                 bias_initializer=tf.constant_initializer(0.1),  # biases
                 name='l1'
             )
-            l2=tf.layers.dense(
-                    inputs=l1,
-                    units=32,
-                    activation=tf.nn.relu,
-                    kernel_initializer=tf.random_normal_initializer(0.,.1),
-                    name='l2'
-                    )
-
             self.v = tf.layers.dense(
-                inputs=l2,
+                inputs=l1,
                 units=1,  # output units
                 activation=None,
                 kernel_initializer=tf.random_normal_initializer(0., .1),  # weights
@@ -142,24 +124,16 @@ print('training')
 for i_episode in range(MAX_EPISODE):
     s = env.reset()
     track_r = 0
-    action_memory=[]
-    for step in range(10):
+    for step in range(47):
         a = actor.choose_action(s)
-        while True:
-           if a in action_memory:
-               a=actor.choose_action(s)+np.random.randint(0,10)
-           else:
-               action_memory.append(a)
-               print(a)
-               break
         s_, r = env.step(a)
-        track_r+=GAMMA*1000*r
-        td_error = critic.learn(s, 1000*r, s_)  # gradient = grad[r + gamma * V(s_) - V(s)]
+        track_r+=GAMMA*r
+        td_error = critic.learn(s, r, s_)  # gradient = grad[r + gamma * V(s_) - V(s)]
         actor.learn(s, a, td_error)     # true_gradient = grad[logPi(s,a) * td_error]
         s = s_
 
     print("episode:", i_episode, "  reward:", track_r)
-    #env.render()
+    env.render()
     reward_log.append(track_r)
 print('done training')
 plt.scatter(range(MAX_EPISODE),reward_log)

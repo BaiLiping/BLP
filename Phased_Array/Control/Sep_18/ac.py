@@ -1,25 +1,25 @@
 import numpy as np
 import tensorflow as tf
-from env import PhasedArrayEnv
+from STMEnv import STMEnv
 import matplotlib.pyplot as plt
 np.random.seed(2)
 tf.set_random_seed(2)  # reproducible
 
 # Superparameters
-MAX_EPISODE = 100000
-MAX_EP_STEPS = 10   # maximum time step in one episode
+MAX_EPISODE = 1000
+MAX_EP_STEPS = 100   # maximum time step in one episode
 GAMMA = 0.9     # reward discount in TD error
-LR_A = 1    # learning rate for actor
-LR_C = 1     # learning rate for critic
+LR_A = 0.1    # learning rate for actor
+LR_C = .1     # learning rate for critic
 
-env = PhasedArrayEnv()
+env = STMEnv()
 
-N_F = 48
+N_F = 2
 N_A = env.get_nA()
 
 
 class Actor(object):
-    def __init__(self, sess, n_features, n_actions, lr=0.001):
+    def __init__(self, sess, n_features, n_actions, lr=LR_A):
         self.sess = sess
 
         self.s = tf.placeholder(tf.float32, [1, n_features], "state")
@@ -70,12 +70,12 @@ class Actor(object):
     def choose_action(self, s):
         s = s[np.newaxis, :]
         probs = self.sess.run(self.acts_prob, {self.s: s})   # get probabilities for all actions
-        print(probs)
+        #print(probs)
         return np.random.choice(np.arange(probs.shape[1]), p=probs.ravel())   # return a int
 
 
 class Critic(object):
-    def __init__(self, sess, n_features, lr=0.01):
+    def __init__(self, sess, n_features, lr=LR_C):
         self.sess = sess
 
         self.s = tf.placeholder(tf.float32, [1, n_features], "state")
@@ -137,20 +137,13 @@ print('training')
 for i_episode in range(MAX_EPISODE):
     s = env.reset()
     track_r = 0
-    action_memory=[]
-    for step in range(10):
+    for step in range(100):
+        s=env.grid_step()
         a = actor.choose_action(s)
-        while True:
-            if a in action_memory:
-                a=actor.choose_action(s)
-            else:
-                action_memory.append(a)
-                break
         s_, r = env.step(a)
         track_r+=r
         td_error = critic.learn(s, r, s_)  # gradient = grad[r + gamma * V(s_) - V(s)]
         actor.learn(s, a, td_error)     # true_gradient = grad[logPi(s,a) * td_error]
-        s = s_
 
     print("episode:", i_episode, "  reward:", track_r)
     reward_log.append(track_r)
@@ -161,15 +154,14 @@ plt.show()
 for i in range(3):
     s=env.reset()
     track_r=0
-    for step in range(10):
+    for step in range(100):
+        s=env.grid_step()
         a=actor.choose_action(s)
         s_,r=env.step(a)
-        track_r+=GAMMA*r
+        track_r+=r
         td_error=critic.learn(s,r,s_)
         actor.learn(s,a,td_error)
-        s=s_
 print(track_r)
-env.render()
 
 
 

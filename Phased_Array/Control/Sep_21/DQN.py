@@ -1,6 +1,6 @@
 import tensorflow as tf
 import numpy as np
-from STMEnv import STMEnv
+from env import PhasedArrayEnv
 import matplotlib.pyplot as plt
 
 tf.set_random_seed(1)
@@ -15,9 +15,9 @@ TARGET_REPLACE_ITER = 100   # target update frequency
 MEMORY_CAPACITY = 2000
 MEMORY_COUNTER = 0          # for store experience
 LEARNING_STEP_COUNTER = 0   # for target updating
-env=STMEnv()
+env=PhasedArrayEnv()
 N_ACTIONS = env.get_nA()
-N_STATES = 2
+N_STATES = 4
 MEMORY = np.zeros((MEMORY_CAPACITY, N_STATES * 2 + 2))     # initialize memory
 
 # tf placeholders
@@ -27,13 +27,11 @@ tf_r = tf.placeholder(tf.float32, [None, ])
 tf_s_ = tf.placeholder(tf.float32, [None, N_STATES])
 
 with tf.variable_scope('q_eval'):
-    l1_eval = tf.layers.dense(tf_s, 1024, tf.nn.relu, kernel_initializer=tf.random_normal_initializer(0, 0.1))
-    l2_eval = tf.layers.dense(l1_eval,1024,tf.nn.relu,kernel_initializer=tf.random_normal_initializer(0, 0.1))
-    q = tf.layers.dense(l2_eval, N_ACTIONS, kernel_initializer=tf.random_normal_initializer(0, 0.1))
+    l1_eval = tf.layers.dense(tf_s, 10, tf.nn.relu, kernel_initializer=tf.random_normal_initializer(0, 0.1))
+    q = tf.layers.dense(l1_eval, N_ACTIONS, kernel_initializer=tf.random_normal_initializer(0, 0.1))
 with tf.variable_scope('q_target'):
-    l1_target = tf.layers.dense(tf_s_, 1024, tf.nn.relu, trainable=False)
-    l2_target=tf.layers.dense(l1_target,1024,tf.nn.relu,trainable=False)
-    q_next = tf.layers.dense(l2_target, N_ACTIONS, trainable=False)
+    l1_target = tf.layers.dense(tf_s_, 10, tf.nn.relu, trainable=False)
+    q_next = tf.layers.dense(l1_target, N_ACTIONS, trainable=False)
 
 q_target = tf_r + GAMMA * tf.reduce_max(q_next, axis=1)                   # shape=(None, ),
 a_indices = tf.stack([tf.range(tf.shape(tf_a)[0], dtype=tf.int32), tf_a], axis=1)
@@ -82,67 +80,43 @@ def learn():
     b_r = b_memory[:, N_STATES+1]
     b_s_ = b_memory[:, -N_STATES:]
     sess.run(train_op, {tf_s: b_s, tf_a: b_a, tf_r: b_r, tf_s_: b_s_})
-print('test random')
-reward_memory=[]
-for i in range(10):
-    s=env.reset()
-    ep_r=0
-    for step in range(100):
-        s=env.grid_step()
-        a=choose_action(s)
-        s_,r=env.step(a)
-        ep_r+=r
-    print('Ep: ', i, '| Ep_r: ', ep_r)
-    reward_memory.append(ep_r)
-
-print('done testing random')
-plt.scatter(range(10),reward_memory)
-plt.savefig('random')
-plt.show()
-
 reward_memory=[]
 for i_episode in range(1000):
     s = env.reset()
     ep_r = 0
-    for step in range(100):
-        s=env.grid_step()
+    for step in range(47):
         a = choose_action(s)
         # take action
-        s_,r = env.step(a)
+        s_, r = env.step(a)
 
         store_transition(s, a, r, s_)
 
-        ep_r += r
+        ep_r += GAMMA*r
         if MEMORY_COUNTER > MEMORY_CAPACITY:
             learn()
 
+        s = s_
     print('Ep: ', i_episode, '| Ep_r: ', ep_r)
+    env.render()
     reward_memory.append(ep_r)
 
 print('done learning')
 plt.plot(range(1000),reward_memory)
 plt.show()
-'''
+plt.savefig('DQN.png')
+
 for i_episode in range(4):
     s = env.reset()
     ep_r = 0
     action_memory=[]
-    for step in range(10):
+    for step in range(47):
         a = choose_action(s)
-        while True:
-            if a in action_memory:
-                a=choose_action(s)
-            else:
-                action_memory.append(a)
-                break
         # take action
         s_, r = env.step(a)
 
         ep_r += GAMMA*r
-
-
         s = s_
     print('Ep: ', i_episode, '| Ep_r: ', ep_r)
- 
+    env.render()
 
-'''
+

@@ -12,7 +12,7 @@ def generate_target():
 def location_info(target_location):
     distance=math.sqrt(pow((3*(target_location[0])),2)+pow(3*(target_location[1]),2))
     impact=(1/(distance+1))*30*math.cos(distance/wave_length)
-    return impact
+    return impact*10
         
 def compute_reward(x,y,p,target_location):
     distance=math.sqrt(pow((3*(x-target_location[0])),2)+pow(3*(y-target_location[1]),2))
