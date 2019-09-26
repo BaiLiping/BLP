@@ -79,6 +79,7 @@ sess = tf.Session()
 actor = Actor(sess, n_features=N_F, n_actions=N_A, lr=LR_A)
 critic = Critic(sess, n_features=N_F, lr=LR_C)
 sess.run(tf.global_variables_initializer())
+saver=tf.train.Saver()
 
 reward_log=[]
 
@@ -101,4 +102,7 @@ print('done training')
 plt.reward(range(MAX_EPISODE),reward_log)
 plt.savefig('result')
 plt.show()
+saver.save(sess,'./saved_network')
+with open('saved_result.pickle','wb') as wfile:
+    pickle.dump(reward_log,wfile)
 

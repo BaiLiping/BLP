@@ -16,17 +16,7 @@ def generate_target():
     print(position)
     return position
     
-def location_info(wave,target_location):
-    distance=math.sqrt(pow((distance_magnification*(target_location[0])),2)+pow((distance_magnification*(target_location[1])),2)+pow(vertical_distance,2))
-    for t in range(division):
-        #impact_t=(1/(distance+vertical_distance))*math.cos((distance/wave_length)*2*math.pi+omega*t)
-        impact_t=math.cos((distance/wave_length)*2*math.pi+omega*t)
-        wave[t]=impact_t*weight
-    magnitute=np.max(wave)
-    return wave,magnitute
-        
 def compute_additive_wave(x,y,p,wave,target_location):
-
     distance=math.sqrt(pow((distance_magnification*(x-target_location[0])),2)+pow((distance_magnification*(y-target_location[1])),2)+pow(vertical_distance,2))
     for t in range(division):
         #impact_t=(1/(distance+vertical_distance))*math.cos(distance/wave_length*(2*math.pi)+omega*t+p*phase)
