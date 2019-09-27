@@ -32,4 +32,5 @@ Survey:
 Articles:
 1. [Distill](https://distill.pub/)
 2. [AI Note from deeplearning.ai](https://www.deeplearning.ai/ai-notes/)
+3. [NIPS papers on Reinforcement Learning](https://papers.nips.cc/search/?q=reinforcement+learning)
 

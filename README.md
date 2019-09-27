@@ -8,3 +8,9 @@ specifically:
 5) Convex Optimization
 
 2. [Princeton's lecture on Bitcoin](https://www.coursera.org/learn/cryptocurrency/lecture/gFEJL/cryptographic-hash-functions)
+
+3. [Christopher Lum's take on Control Theory, he is good, with Boeing now](https://www.youtube.com/user/christopherwlum/playlists)
+
+4. [Reinforcement Learning Applied to Linear Quadratic Regulation](https://papers.nips.cc/paper/712-reinforcement-learning-applied-to-linear-quadratic-regulation.pdf)
+
+5. [NIPS Proceedings](https://papers.nips.cc/)
