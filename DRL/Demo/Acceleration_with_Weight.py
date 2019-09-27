@@ -10,7 +10,7 @@ Observation:
         state_with_acceleration:
         velocity,position,acceleration,velocity,angle_change,angle,velocity_acceleration,velocity
         the weight:
-        3,1,3,2,3,1,5,3
+        1,1,1,1,
         
     Actions:
         Type: Discrete(2)
@@ -31,9 +31,9 @@ np.random.seed(1)
 
 # Hyper Parameters
 BATCH_SIZE = 32
-LR = 0.01                   # learning rate
-EPSILON = 0.9               # greedy policy
-GAMMA = 0.9                 # reward discount
+LR = 0.001                   # learning rate
+EPSILON = 1               # greedy policy
+GAMMA = 0.3                 # reward discount
 TARGET_REPLACE_ITER = 100   # target update frequency
 MEMORY_CAPACITY = 2000
 MEMORY_COUNTER = 0          # for store experience
@@ -50,12 +50,13 @@ tf_a = tf.placeholder(tf.int32, [None, ])
 tf_r = tf.placeholder(tf.float32, [None, ])
 tf_s_ = tf.placeholder(tf.float32, [None, N_STATES])
 
+
 with tf.variable_scope('q'):        # evaluation network
-    l_eval = tf.layers.dense(tf_s, 20, tf.nn.relu, kernel_initializer=tf.random_normal_initializer(0, 0.1))
+    l_eval = tf.layers.dense(tf_s, 30, tf.nn.relu, kernel_initializer=tf.random_normal_initializer(0, 0.1))
     q = tf.layers.dense(l_eval, N_ACTIONS, kernel_initializer=tf.random_normal_initializer(0, 0.1))
 
 with tf.variable_scope('q_next'):   # target network, not to train
-    l_target = tf.layers.dense(tf_s_, 20, tf.nn.relu, trainable=False)
+    l_target = tf.layers.dense(tf_s_, 30, tf.nn.relu, trainable=False)
     q_next = tf.layers.dense(l_target, N_ACTIONS, trainable=False)
 
 q_target = tf_r + GAMMA * tf.reduce_max(q_next, axis=1)                   # shape=(None, ),
@@ -69,11 +70,15 @@ train_op = tf.train.AdamOptimizer(LR).minimize(loss)
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 
+decay_rate=0.7
 
 def choose_action(s):
     s = s[np.newaxis, :]
+    global EPSILON
+    EPSILON*=decay_rate
+
     #s=np.array(s[:,0])
-    if np.random.uniform() < EPSILON:
+    if np.random.uniform() > EPSILON:
         # forward feed the observation and get q value for every actions
         actions_value = sess.run(q, feed_dict={tf_s: s})
         action = np.argmax(actions_value)
@@ -116,7 +121,8 @@ for i_episode in range(400):
     a=np.random.choice(np.arange(N_ACTIONS))
     s_orig_2,r,done,info=env.step(a)
     s_with_acceleration=[]
-    weight=[.2,.1,.2,.3,.2,.1,.3,.2]
+    #weight=[10,1,10,100,10,1,100,10]
+    weight=[.1,.1,.1,.1,10,10,10,10]
     for i in range(4):
         s_with_acceleration.append(weight[i]*(s_orig_2[i]-s_orig_1[i]))
         s_with_acceleration.append(weight[2*i]*s_orig_2[i])

@@ -8,6 +8,13 @@ Resources for DRL:
 6. Berkeley RL Bootcamp2017
 7. [OpenAI Baseline Implementation of Algs](https://github.com/openai/baselines)
 8. [MorvanZhou Implementation of Algs](https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow)
+9. Workshop on Learning for Control (57th IEEE Conference on Decision and Control, aka CDC) [link](https://kgatsis.github.io/learning_for_control_workshop_CDC2018/)
+10. Learning for Dynamics and Control (L4DC) [link](https://l4dc.mit.edu/) [videos](https://www.youtube.com/playlist?list=PLYx2nCJDi_QFrGOmIM0ale8T_1Fqu8OIF)
+
+
+
+
+
 
 Books for DRL:
 
