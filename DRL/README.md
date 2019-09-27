@@ -14,11 +14,12 @@ Resources for DRL:
 
 Books for DRL:
 
-1. [Statistical Learning](https://github.com/BaiLiping/BLP/blob/master/DRL/Books/Statistical%20Learning.pdf) (quite a lot stats concepts made its way into DRL, such as importance sampling, KL divergence, Heffoling Inequalities etc. It is a good background)
-2. [RL by Rich Sutton]() (Approximation with NN is a new development, but the overall structure of RL is still what Rich Sutton lays out in his book: Dynamic Programming->Monto Carlo->TD(0)->TD(lambda))->Tabular Methods->Q-learning->Generalization with Function Approximations->Policy Gradient->Actor-Critic with Advantage, also the distinction between on-policy learning, off-policy learning
+1. [Statistical Learning](https://github.com/BaiLiping/BLP/blob/master/DRL/Books/Statistical%20Learning.pdf) quite a lot stats concepts made its way into DRL, such as importance sampling, KL divergence, Heffoling Inequalities etc. It is a good background
+2. [RL by Rich Sutton](https://github.com/BaiLiping/BLP/blob/master/DRL/Books/RLbook2018.pdf) Approximation with NN is a new development, but the overall structure of RL is still what Rich Sutton lays out in his book: Dynamic Programming->Monto Carlo->TD(0)->TD(lambda))->Tabular Methods->Q-learning->Generalization with Function Approximations->Policy Gradient->Actor-Critic with Advantage, also the distinction between on-policy learning, off-policy learning
 3. [Decision Making Under Uncertainty](https://web.stanford.edu/class/aa228/cgi-bin/wp/)
 4. [Algorithms for Reinforcement Learning](https://sites.ualberta.ca/~szepesva/RLBook.html)
 
 Survey:
 1. [List of Implementation and Papers of PG Algorithms](https://lilianweng.github.io/lil-log/2018/04/08/policy-gradient-algorithms.html#actor-critic)
 2. [A Tour of Reinforcement Learning: The View from Continuous Control](https://github.com/BaiLiping/BLP/blob/master/DRL/Books/1806.09460.pdf)
+3. [seeing theory](https://seeing-theory.brown.edu)
