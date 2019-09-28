@@ -1,6 +1,7 @@
 Material:
 1. [Jonathan Valvano](https://www.youtube.com/channel/UCVf1i0hXlLsXIrF7V1NWA0Q)
 2. [TI Robotics](https://training.ti.com/ti-robotics-system-learning-kit)
+3. [Quantum Leap](https://www.youtube.com/playlist?list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM)
 
 key skillsets:
 1. Writing to registers with C
@@ -8,17 +9,17 @@ key skillsets:
 3. Version Control. There are all kinds of fancy tools for this. But what I find is that just save your work at the end of the day into a new folder, named after the date. This is dumb i know, but works for me.
 4. Modularity. the main code should be self-explainatory, all the functionalities should be packaged into modules.
 5. Capacities provided by MicroController:
-1) Basic Communication Protocols such as UART, SPI, I2C
-2) Hardware controlled PWM
-3) ADC/DAC
+   a) Basic Communication Protocols such as UART, SPI, I2C
+   b) Hardware controlled PWM
+   c) ADC/DAC
 6. Ninja Level use of MicroControllers:
-1) Multi-threading
-2) Scheduler
-3) Hard Realtime Control
+   a) Multi-threading
+   b) Scheduler
+   c) Hard Realtime Control
 7. Interfacing of MicroController and Circuit
 this is not as simple as it seems. Quite a lot considerations goes into the design, such as max current, max voltage. MicroController should be treated as a delicate object that is easily broken.
 8. PCB Design
-1) Signal Integrity, but mostly for high speed circuit
-2) Layered Design of PCB (FR4)
-3) Most of the PCB would feature of MicroController in the middle and various drivers around. How to power the system should be carefully considered, what is the current in the system, etc.
+   a) Signal Integrity, but mostly for high speed circuit
+   b) Layered Design of PCB (FR4)
+   c) Most of the PCB would feature of MicroController in the middle and various drivers around. How to power the system should be carefully considered, what is the current in the system, etc.
 
