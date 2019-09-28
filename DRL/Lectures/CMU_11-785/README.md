@@ -1,2 +1,1 @@
-![Synaptic_Model](Synaptic_Model.pnd
-)
+![Synaptic_Model](Synaptic_Model.png)
