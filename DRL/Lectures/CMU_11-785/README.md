@@ -16,7 +16,7 @@ when you have infinite amount of perceptrons to define the boundaries, then you 
 5. ![time series](Multiple_Perceptron_for_Time_Series)
 Not only can perceptrons be used to model any 2D shape, if you tile them up in temporal axis, you can use it to model any time series.
 
-6. ![7](7.png) ![8](8.png)
+6. ![0](AddingCircles.png)![7](7.png) ![8](8.png)
 
 7. ![another way of building the basic unit](9.png) ![10](10.png) ![11](11.png)
 
