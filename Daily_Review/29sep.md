@@ -9,5 +9,7 @@
 7. can i apply RNN to the phased array problem?
 8. what are some of the best ways to understand thony concepts:
 9. the relationship between max log-likelihood and cross entropy.
+10. Baysian Actor_Critic Method
+how to fit baysian statistics into the updating scheme.
 
 

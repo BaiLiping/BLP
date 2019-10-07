@@ -2,4 +2,3 @@
 
 2. Importance sampling is more than just a variance reductioni method. It can be used to study one distriburtion while sampling from amother. It is an important prerequisite for sequential Monte Carlo. 
 
-\int\limits_0^infty

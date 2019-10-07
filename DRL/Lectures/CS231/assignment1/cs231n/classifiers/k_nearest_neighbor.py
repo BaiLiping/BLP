@@ -77,7 +77,9 @@ class KNearestNeighbor(object):
                 #####################################################################
                 # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-                dist[i][j]=np.sqrt(np.sum(np.square(X[i]-self.X_train[j])))
+                square=np.square(X[i]-self.X_train[j])
+                square_sum=np.sum(square,axis=0)
+                dists[i][j]=np.sqrt(square_sum)
 
                 # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         return dists
@@ -100,8 +102,10 @@ class KNearestNeighbor(object):
             # Do not use np.linalg.norm().                                        #
             #######################################################################
             # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
-
-            dist[i]=np.sqrt(np.sum(np.square(self.X_train-X[i]),axis=1))
+            square=np.square(self.X_train-X[i])
+            #the dimmention is (n_sample, dimmention of each sample, therefore, one should sum over the dimmention axis, which is 1, also notice that np.sum would result in a list instead of an array)
+            square_sum=np.sum(square,axis=1)[np.newaxis,:]
+            dists[i]=np.sqrt(square_sum)
 
             # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         return dists
@@ -130,14 +134,9 @@ class KNearestNeighbor(object):
         #       and two broadcast sums.                                         #
         #########################################################################
         # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
-        X_train_square=np.sum(np.square(self.X_train),axis=1)
-        X_square=np.sum(np.square(x),axis=1)
-        cross=np.dot(X,self.X_train.T)
-
-
-        dists = np.sqrt(-2*np.dot(X, self.X_train.T) + np.sum(np.square(self.X_train), axis = 1) + np.transpose([np.sum(np.square(X), axis = 1)]))
-
-
+        X_train_square=np.square(self.X_train)
+        X_square=(np.square(X))
+        dists=np.sqrt(np.sum(X_square,axis=1)[:,np.newaxis]+np.sum(X_train_square,axis=1)[:,np.newaxis].T-2*np.dot(X,np.transpose(self.X_train)))
         # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
         return dists
 
@@ -169,7 +168,11 @@ class KNearestNeighbor(object):
             #########################################################################
             # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
-            pass
+            #the distance matrix is with dimmention (n_test, n_train) the idea is to find the min component of each row, that would give the closest distance to the training data. 
+            ascending_order=np.argsort(dists[i])
+            kth_ascending_order=ascending_order[0:k]
+            closest_y=[self.y_train[i] for i in kth_ascending_order]
+            print(closest_y)
 
             # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
             #########################################################################
@@ -180,8 +183,8 @@ class KNearestNeighbor(object):
             # label.                                                                #
             #########################################################################
             # *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
-
-            pass
+            y_pred[i]=np.argmax(np.bincount(closest_y))
+            
 
             # *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
 
