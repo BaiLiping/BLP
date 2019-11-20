@@ -14,35 +14,38 @@ class Identity(Activation):
         super(Identity,self).__init__()
     def forward(self,x):
         self.state=x
-        return x
+        return self.state
     def derivative(self):
         return 1.0
 class Sigmoid(Activation):
     def __init__(self):
         super(Sigmoid,self).__init__()
     def forward(self,x):
-        self.state=1/(1+np.exp(-x))
-        return self.state
+        self.state=x
+        activated_state=1/(1+np.exp(-self.state))
+        return activated_state
     def derivative(self):
-        derivative=np.exp(-x)/np.power((1+np.exp(-x)),2)
+        derivative=np.exp(-self.state)*np.power((1+np.exp(-self.state)),-2)       
         return derivative
 class Tanh(Activation):
     def __init(self):
         super(Tanh,self).__init__()
     def forward(self,x):
-        self.state=np.tanh(x)
-        return self.state
+        self.state=x
+        activated_state=np.tanh(x)
+        return activated_state
     def derivative(self):
-        derivative=1-np.power((np.tanh(x)),2)
+        derivative=1-np.power((np.tanh(self.state)),2)
         return derivative
 class ReLU(Activation):
     def __init__(self):
         super(ReLU,self).__init__()
     def forward(self,x):
-        self.state=max(x,0)
-        return self.state
+        self.state=x
+        activated_state=max(x,0)
+        return activated_state
     def derivative(self):
-        if self.state=0:
+        if self.state<0:
             return 0
         else:
             return 1

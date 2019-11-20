@@ -12,7 +12,7 @@ for debugging and tuning purposes.
 
 """
 
-import hw1.hw1 as nn
+import hw1 as nn
 import numpy as np
 import matplotlib.pyplot as plt
 import os

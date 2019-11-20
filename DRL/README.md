@@ -15,7 +15,7 @@ Resources for DRL:
 13. [Statistical Learning](https://www.youtube.com/channel/UCGoxKRfTs0jQP52cfHCyyRQ)
 14. [CS229 Machine Learning](http://cs229.stanford.edu/syllabus.html)
 15. [Advanced Survey of Reinforcement Learning](http://web.stanford.edu/class/archive/cs/cs332/cs332.1182/#!syllabus.md)
-
+16. CS285 Fall 2019[webiste](http://rail.eecs.berkeley.edu/deeprlcourse)[discussion](https://www.reddit.com/r/berkeleydeeprlcourse/)[videos](https://www.youtube.com/playlist?list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A)
 
 Books for DRL:
 
